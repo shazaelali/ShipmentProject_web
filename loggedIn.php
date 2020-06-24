@@ -1,6 +1,12 @@
 
 
-
+ <?php 
+      session_start();
+       if(isset($_SESSION["name"])){
+            echo  $_SESSION["name"];
+        }
+        
+        else echo"error";?>
 
 
 <!DOCTYPE html>
@@ -15,20 +21,125 @@
 </head>
 <body >
 
-    
-    <div class="container">
-   <div class="text-*-center font-italic" style="color:#7FB3D5"> 
-   <h3> Welcome
-       <?php 
-      session_start();
-       if(isset($_SESSION["name"])){
-            echo  $_SESSION["name"];
-        }
+
+   
+
+<div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
+
+<div class="row">
+
+    <div class="col-12">
+        <div class="row">
+            <div class="col-6">
+                <div style="margin: 20px;">
+                   
+                </div>
+            </div>
+            <div class="col-6">
+
+                <div style="margin: 20px;">
+
+                  
+                   
+</div>
+
+                
+                    </div>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-lg-8 col-12">
+       
+      
+
+        <div class="row" >
+
+            <div class="col-sm-12 col-lg-12" style="">
+                <div class="chart-container" style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+                   
+
+                    <div class="card-body">
+
+
+                        <div id="bar-example" style=" height: 220px;"></div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-sm-12 col-lg-12">
+                <div class="chart-container" style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+                   
+
+                    <div class="card-body">
+
+
+                        <div id="bar-example" style=" height: 220px;"></div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row" >
+
+            <div class="col-sm-12 col-lg-12" style="">
+                <div class="chart-container" style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+                  
+
+                    <div class="card-body">
+
+
+                        <div id="bar-example" style=" height: 220px;"></div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+      
+    </div>
+
+    <div class="col-lg-4 col-12">
+
+
+        <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
+           
+
+
+        </div>
+
+        <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
+           
+
+
+        </div>
+
+
+   
+
         
-        else echo"error";?>
-        to candidat page please vote </h3> </div>
-		<div class="col-lg-12  d-block" style="">
-		<div class="row " >	
+    </div>
+
+</div>
+</div>
+
+
+  
+		
             
 
 
