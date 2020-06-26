@@ -1,0 +1,44 @@
+/** ======================  tous les couleur ==============================**/
+
+:root{
+    --primary:#111B54;
+    --light:#ffffff;
+    --grey:#efefef;
+}
+body{ overflow: hidden;/**scrole**/
+    font-weight: 300; color:#111B54; list-style: 26px;font-family: 'Roboto', sans-serif; }
+
+/** ======================  base css ==============================**/
+
+
+/** ======================  menu==============================**/
+#sidbar-container{
+    min-height: 100vh;
+    background-color:	#585858;
+}
+a:hover{ text-decoration: none; }
+
+#sidbar-container .logo{
+ padding: .875rem 1.25rem;
+
+}
+#sidbar-container .menu{
+
+    width:18rem;
+}
+.bg-light{
+   background-color:#ffffff ;
+}
+.img{
+    width: 40px;
+    height: 40px;
+}
+i{
+    font-size: 29px;
+    padding: 9px;
+}
+#content{
+    overflow-y: auto;
+    height:100vh;
+    padding-bottom: 5rem;
+}
