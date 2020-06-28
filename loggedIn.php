@@ -3,10 +3,11 @@
  <?php 
       session_start();
        if(isset($_SESSION["name"])){
-            echo  $_SESSION["name"];
+            echo "bonjour". $_SESSION["name"];
         }
         
-        else echo"error";?>
+        else echo"error";
+        ?>
 
 
 <!DOCTYPE html>

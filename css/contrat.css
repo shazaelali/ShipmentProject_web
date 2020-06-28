@@ -36,13 +36,11 @@ a:hover{ text-decoration: none; }
     max-width:  40px;
     max-height: 40px;
 }
-i{
-    font-size: 29px;
-    padding: 9px;
-}
+ 
 .fa{
     font-size: 29px; 
     padding: 10px 12px;
+    color: #26B7D4;
 }
 .paddingMenu{
     padding:5px 5px;
@@ -51,4 +49,10 @@ i{
     overflow-y: auto;
     height:100vh;
     padding-bottom: 5rem;
+}
+/**----------- ---------**/
+.labelFor{
+    color: #26B7D4;
+    
+    font-size: x-large;
 }
