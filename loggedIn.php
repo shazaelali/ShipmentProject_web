@@ -4,9 +4,12 @@
       session_start();
        if(isset($_SESSION["name"])){
             echo "bonjour". $_SESSION["name"];
+        }else{
+
+            header("Location:Login.html");
         }
         
-        else echo"error";
+        // else echo"error";
         ?>
 
 
@@ -24,7 +27,7 @@
 
 
    
-
+<a class="dropdown-item paddingMenu" href="LogOut.php"style="padding: 0px;" > <i class="fa fa-sign-out" aria-hidden="true"></i>logOut</a>
 <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
 
 <div class="row">

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'connect.php';
 $em=$_POST["email"];
 $pass=$_POST["password"];
@@ -14,13 +15,14 @@ if(mysqli_num_rows($res)==1){//>0 plusieur email meme password /==1 email avec p
     if(password_verify($pass,$row['Password']))
     {
         if($pass=="admin123"){
+         // session_start();
             $_SESSION['id']=$row["IdUsers"];
             $_SESSION['name']=$row["FirstName"]." ".$row["LastName"];
 
             header('location:admin.php');
           }
          else{
-           session_start();
+          //session_start();
     
           $_SESSION['id']=$row["IdUsers"];
           $_SESSION['name']=$row["FirstName"]." ".$row["LastName"];

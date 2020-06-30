@@ -30,7 +30,7 @@
              <h4 class="text-light font-weight-bold  m-2">Admin</h4>
           </div>
             <div class="menu">
-                <a href="admin.php" class="d-block  text-light p-3 " ><i class="fa fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
+            <a href="admin.php" class="d-block  text-light p-3 " ><i class="fa fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
                 Dashboard</a>
                 <a href="contrat.php " class="d-block  text-light p-3"><i class="fa fa-newspaper-o" aria-hidden="true" style="color: #EEE"></i>
                 Contart</a>
@@ -38,8 +38,8 @@
                 Company</a>
                 <a href="shipment.php" class="d-block text-light p-3"><i class="fa fa-truck" aria-hidden="true" style="color: #EEE"></i>
                 Shipment</a>
-                <a href="" class="d-block text-light p-3"><i class="fa fa-file" style="color: #EEE"></i>
-                Type shipment</a>
+                <a href="typeShipment.php" class="d-block text-light p-3"><i class="fa fa-file" style="color: #EEE"></i>
+                Type controle</a>
             </div>
       </div>
       <div class="w-100">
@@ -123,48 +123,118 @@
      <div class="card-body">
 
         <div id="bar-example" >
-           <form>
+        <form name="shippmentForm" action="insertShipment.php" method="post">
             <div class="form-group">
                <label for="From" style=" color: #26B7D4;font-size: x-large;">From</label>
-              <input type="text" class="form-control form-control-lg" id="From"  placeholder="From">
+              <input type="text" class="form-control form-control-lg" id="From" name="From" placeholder="From">
                
              </div>
 
              <div class="form-group">
             <label for="To" style=" color: #26B7D4;font-size: x-large;">To</label>
-             <input type="text" class="form-control form-control-lg" id="To" placeholder="To">
+             <input type="text" class="form-control form-control-lg" id="To"  name="To" placeholder="To">
             </div>
 
             <div class="form-group">
             <label for="Date" style=" color: #26B7D4;font-size: x-large;">Date </label>
-             <input type="text" class="form-control form-control-lg" id="Date" placeholder="Date ">
+             <input type="date" class="form-control form-control-lg" id="Date" name="Date" placeholder="Date ">
             </div>
             <div class="form-group">
             <label for="Weight" style=" color: #26B7D4;font-size: x-large;">Weight</label>
-             <input type="text" class="form-control form-control-lg" id="Weight" placeholder="Weight">
+             <input type="text" class="form-control form-control-lg" id="Weight" name="Weight" placeholder="Weight">
             </div>
             <div class="form-group">
             <label for="Decription" style=" color: #26B7D4;font-size: x-large;">Decription</label>
-             <input type="text" class="form-control form-control-lg" id="Decription" placeholder="Decription">
+             <input type="text" class="form-control form-control-lg" id="Decription" name="Decription" placeholder="Decription">
             </div>
-            <div class="form-group">
-            <label for="Region" style=" color: #26B7D4;font-size: x-large;">Region</label>
-             <input type="text" class="form-control form-control-lg" id="Region" placeholder="Region">
-            </div>
-            <div class="form-group">
-            <label for="Ville" style=" color: #26B7D4;font-size: x-large;">Ville</label>
-             <input type="text" class="form-control form-control-lg" id="Ville" placeholder="Ville">
-            </div>
-            <div class="form-group">
-            <label for="pay" style=" color: #26B7D4;font-size: x-large;">pay</label>
-             <input type="text" class="form-control form-control-lg" id="pay" placeholder="pay">
-            </div>
+           
+               
+            <label  style=" color: #26B7D4;font-size: x-large;">Region</label>
+            <select class="form-control form-control-lg" placeholder="Region" name="Region">
+           
+            <?php 
+              include 'connect.php';
+              $q=" SELECT `IdRegion`, `regionName`, `IdVille` FROM `region`" ;
+             
+              $res=mysqli_query($connect,$q);
+             
+                while($row=mysqli_fetch_assoc($res))
+                   { 
+                      echo'<option values="'.$row['IdRegion'].'">'.$row['regionName'].'</option>';
+                   }
+            ?>
+            
+               </select>
+           
+            <label  style=" color: #26B7D4;font-size: x-large;">Ville</label>
+            <select class="form-control form-control-lg" placeholder="Ville" name="Ville">
+           
+            <?php 
+              include 'connect.php';
+              $q=" SELECT `IdVille`, `NameVille`, `IdPay` FROM `ville`" ;
+              $res=mysqli_query($connect,$q);
+             
+                while($row=mysqli_fetch_assoc($res))
+                   { 
+                      echo'<option values="'.$row['IdVille'].'">'.$row['NameVille'].'</option>';
+                   }
+            ?>
+            
+               </select>
+
+             
+            <label  style=" color: #26B7D4;font-size: x-large;">pay</label>
+            <select class="form-control form-control-lg" placeholder="pay" name="pay">
+           
+            <?php 
+              include 'connect.php';
+              $q=" SELECT `IdPay`, `NamePay` FROM `pay`" ;
+              $res=mysqli_query($connect,$q);
+             
+                while($row=mysqli_fetch_assoc($res))
+                   { 
+                      echo'<option values="'.$row['IdPay'].'">'.$row['NamePay'].'</option>';
+                   }
+            ?>
+            
+               </select>
+             
+            
+            
+            <label  style=" color: #26B7D4;font-size: x-large;">Type Shippement</label>
+            <select class="form-control form-control-lg" placeholder="Type Shippement" name="StShip">
+           
+            <?php 
+              include 'connect.php';
+              $q=" SELECT  `shipTypeID`,`TypeName` FROM `shippmenttype`" ;
+              $res=mysqli_query($connect,$q);
+             
+                while($row=mysqli_fetch_assoc($res))
+                   { 
+                      echo'<option values="'.$row['shipTypeID'].'">'.$row['TypeName'].'</option>';
+                   }
+            ?>
+            
+               </select>
+
+                
+            <label  style=" color: #26B7D4;font-size: x-large;">Status</label>
+            <select class="form-control form-control-lg" placeholder="Status" name="status">
+           
+        <?php 
+              include 'connect.php';
+              $q="  SELECT `StatusID`, `statusName` FROM `status`" ;
+              $res=mysqli_query($connect,$q);
+             
+                while($row=mysqli_fetch_assoc($res))
+                   { 
+                      echo'<option values="'.$row['StatusID'].'">'.$row['statusName'].'</option>';
+                   }
+            ?>
+            
+               </select>
          
-         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-         </div>
-           <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;"/>
            </form>
         </div>
 

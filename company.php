@@ -1,8 +1,6 @@
 <?php 
      session_start();
-    
  ?>
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,8 +29,7 @@
           <div class="logo ">
              <h4 class="text-light font-weight-bold  m-2">Admin</h4>
           </div>
-            <div class="menu">
-            <a href="admin.php" class="d-block  text-light p-3 " ><i class="fa fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
+          <a href="admin.php" class="d-block  text-light p-3 " ><i class="fa fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
                 Dashboard</a>
                 <a href="contrat.php " class="d-block  text-light p-3"><i class="fa fa-newspaper-o" aria-hidden="true" style="color: #EEE"></i>
                 Contart</a>
@@ -42,7 +39,6 @@
                 Shipment</a>
                 <a href="typeShipment.php" class="d-block text-light p-3"><i class="fa fa-file" style="color: #EEE"></i>
                 Type controle</a>
-            </div>
       </div>
       <div class="w-100">
 
@@ -112,92 +108,144 @@
 
 </div>
   <div class="row">
-       <div class="col-lg-8 col-12">
+       <div class="col-lg-12 col-12">
 
-         <div class="row" >
+        <div class="row" >
 
-   <div class="col-sm-12 col-lg-12" style="">
-       <div class="chart-container" style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
-       <div>
-           <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-           <span style="color:#26B7D4; font-size: x-large;">Contart</span>
-        </div>
-     <div class="card-body">
-
-        <div id="bar-example" >
-        <form name="typeshippmentForm" action="insertContrat.php" method="post">
-           
-            <div class="form-group">
-               <label for="NameCompany " style=" color: #26B7D4;font-size: x-large;">Name Company</label>
-              <input type="text" class="form-control form-control-lg" id="NameCompany" name="NameCompany"  placeholder="Name Company">
-               
-             </div>
-
-             <div class="form-group">
-            <label for="Description" style=" color: #26B7D4;font-size: x-large;">Description</label>
-             <input type="text" class="form-control form-control-lg" id="Description" name="Description" placeholder="Description">
-            </div>
-
-            <div class="form-group">
-            <label for="DateContrat" style=" color: #26B7D4;font-size: x-large;">Date Contrat</label>
-             <input type="date" class="form-control form-control-lg" id="DateContrat" name="DateContrat" placeholder="Date Contrat">
-            </div>
-            <div class="form-group">
-            <label for="DateExpireContrat" style=" color: #26B7D4;font-size: x-large;">Date Expire Contrat</label>
-             <input type="date" class="form-control form-control-lg" id="DateExpireContrat" name="DateExpireContrat" placeholder="Date Expire Contrat">
-            </div>
-           
-            <label  style=" color: #26B7D4;font-size: x-large;">Type Shippement</label>
-            <select class="form-control form-control-lg" placeholder="Type Shippement" name="StShip">
-           
-            <?php 
-              include 'connect.php';
-              $q=" SELECT  `shipTypeID`,`TypeName` FROM `shippmenttype`" ;
-              $res=mysqli_query($connect,$q);
-             
-                while($row=mysqli_fetch_assoc($res))
-                   { 
-                      echo'<option values="'.$row['shipTypeID'].'">'.$row['TypeName'].'</option>';
-                   }
-            ?>
-            
-               </select>
-           
-         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-         </div>
-           <button type="submit" class="btn btn-primary">Submit</button>
-           </form>
-        </div>
-
+           <div class="col-sm-12 col-lg-12" style="">
+           <div style="background-color:white;min-height:400px; ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+           <div>
+           <i class="fa fa-building-o" aria-hidden="true"></i>
+           <span style="color:#26B7D4; font-size: x-large;"> Company</span>
            </div>
-       </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th scope="col">Id contrat</th>
+            <th scope="col">Name Company</th>
+            <th scope="col">Type Shipment</th>
+            <th scope="col">Date </th>
+            <th scope="col">Date Expire</th>
+            <th scope="col">Decription</th>
+           </tr>
+          </thead>
+           <tbody>
+             <tr>  <th scope="row">1</th>
+                    <td>Mark</td>
+                     <td>Otto</td>
+                     <td>@mdo</td>
+                     <td>@twitter</td>
+                     <td>Jacob</td>
+                   
+             </tr>
+      
+              <tr>
+                 <th scope="row">2</th>
+                 <td>Jacob</td>
+                 <td>Thornton</td>
+                 <td>@fat</td>
+                 <td>Thornton</td>
+                 <td>@twitter</td>
+               </tr>
+               <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+               </tr>
+               <tr>  <th scope="row">4</th>
+                    <td>Mark</td>
+                     <td>Otto</td>
+                     <td>@mdo</td>
+                     <td>@twitter</td>
+                     <td>Jacob</td>
+                   
+             </tr>
+             <tr>  
+                 <th scope="row">5</th>
+                    <td>Mark</td>
+                     <td>Otto</td>
+                     <td>@mdo</td>
+                     <td>@twitter</td>
+                     <td>Jacob</td>
+                   
+             </tr>
+      
+            </tbody>
+        </table>
+      </div>
 
 
+      </div>
    </div>
-</div>
-
-
-</div>
-
-<div class="col-lg-4 col-12">
-
-
-<div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
+   <div class="row " style="min-height:400px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
   
+   <table class="table table-striped">
+            <thead>
+            <tr>
+            <th scope="col">Id contrat</th>
+            <th scope="col">Name Company</th>
+            <th scope="col">Type Shipment</th>
+            <th scope="col">Date </th>
+            <th scope="col">Date Expire</th>
+            <th scope="col">Decription</th>
+           </tr>
+          </thead>
+           <tbody>
+             <tr>  <th scope="row">1</th>
+                    <td>Mark</td>
+                     <td>Otto</td>
+                     <td>@mdo</td>
+                     <td>@twitter</td>
+                     <td>Jacob</td>
+                   
+             </tr>
+      
+              <tr>
+                 <th scope="row">2</th>
+                 <td>Jacob</td>
+                 <td>Thornton</td>
+                 <td>@fat</td>
+                 <td>Thornton</td>
+                 <td>@twitter</td>
+               </tr>
+               <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+               </tr>
+               <tr>  <th scope="row">4</th>
+                    <td>Mark</td>
+                     <td>Otto</td>
+                     <td>@mdo</td>
+                     <td>@twitter</td>
+                     <td>Jacob</td>
+                   
+             </tr>
+             <tr>  
+                 <th scope="row">5</th>
+                    <td>Mark</td>
+                     <td>Otto</td>
+                     <td>@mdo</td>
+                     <td>@twitter</td>
+                     <td>Jacob</td>
+                   
+             </tr>
+      
+            </tbody>
+        </table>
+
+    </div>
 
 
 </div>
 
-<div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-  
 
-
-</div>
-
-
-</div>
 
 </div>
 </div>

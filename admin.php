@@ -30,11 +30,16 @@
              <h4 class="text-light font-weight-bold  m-2">Admin</h4>
           </div>
             <div class="menu">
-            <a href="admin.php" class="d-block  text-light p-3 " ><i class="fa fa-tachometer w" aria-hidden="true"></i>Dashboard</a>
-                <a href="contrat.php " class="d-block  text-light p-3"><i class="icon ion-md-people"></i>Contart</a>
-                <a href="company.php" class="d-block text-light p-3"><i class="icon ion-ios-stats"></i>Company</a>
-                <a href="#" class="d-block text-light p-3"><i class="icon ion-ios-stats"></i>Shippement</a>
-                <a href="#" class="d-block text-light p-3"><i class="icon ion-ios-stats"></i> Type shippement</a>
+            <a href="admin.php" class="d-block  text-light p-3 " ><i class="fa fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
+                Dashboard</a>
+                <a href="contrat.php " class="d-block  text-light p-3"><i class="fa fa-newspaper-o" aria-hidden="true" style="color: #EEE"></i>
+                Contart</a>
+                <a href="company.php" class="d-block text-light p-3"><i class="fa fa-building-o" aria-hidden="true"style="color: #EEE"></i>
+                Company</a>
+                <a href="shipment.php" class="d-block text-light p-3"><i class="fa fa-truck" aria-hidden="true" style="color: #EEE"></i>
+                Shipment</a>
+                <a href="typeShipment.php" class="d-block text-light p-3"><i class="fa fa-file" style="color: #EEE"></i>
+                Type controle</a>
             </div>
       </div>
       <div class="w-100">
@@ -43,7 +48,7 @@
      <div class="container-fluid">
      <h3>
        Welcome  
-      <?php if(isset($_SESSION["name"])){echo  $_SESSION["name"];}else echo"error";?></h3>
+      <?php if(isset($_SESSION["name"])){echo  $_SESSION["name"];}else  header("Location:Login.html");?></h3>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
@@ -79,7 +84,7 @@
     </div>
      </nav>
        <div id="content">
-       <!-- <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
+       <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
 
       <div class="row">
 
@@ -104,27 +109,96 @@
  </div>
 
 </div>
-<      div class="row">
-<div class="col-lg-8 col-12">
+<div class="row">
+<div class="col-lg-12 col-12">
 
 
 
 <div class="row" >
 
-   <div class="col-sm-12 col-lg-12" style="">
-       <div class="chart-container" style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
-          
+<div class="col-lg-6 col-12">
+            <div class="row">
+                <div class="col-md-6 mb-3 div">
+                    <div class="card text-white border-light " style="margin-bottom:0;background-color: #8CBC59">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xl mb-1">Total users</div>
+                                    <div class="h3 mb-0 font-weight-bold text-gray-800">
+                                       1
 
-           <div class="card-body">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                <i class="fa fa-users" aria-hidden="true" style="color:wight ; font-size:40"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
-               <div id="bar-example" style=" height: 220px;"></div>
+                </div>
 
-           </div>
-       </div>
+                <div class="col-md-6 mb-3 div">
+                    <div class="card text-white border-light" style="margin-bottom:0;background-color: #FB5151">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs mb-1">Total admin</div>
+                                    <div class="h3 mb-0 font-weight-bold text-gray-800">
+                                      1
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                <i class="fa fa-lock" aria-hidden="true"  style="color:wight ; font-size:40"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
-   </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3  div " style="margin:0">
+                    <div class=" card border-light " style="margin-bottom:0;background-color: white">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs mb-1" style="color:#26B7D4">Total contart</div>
+                                    <div class="h3 mb-0 font-weight-bold text-gray-800" style="color:#707070">
+
+                                        2
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                <i class="fa fa-newspaper-o" aria-hidden="true"  style="color:#26B7D4 ; font-size:50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3  div " style="margin:0">
+                    <div class="card border-light" style="margin-bottom:0;background-color: white">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs mb-1" style="color:#26B7D4">Total shipment</div>
+                                    <div class="h3 mb-0 font-weight-bold text-gray-800" style="color:#707070">
+                                        3
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                <i class="fa fa-truck" aria-hidden="true"  style="color:#26B7D4 ; font-size:50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
 </div>
 
 
@@ -191,7 +265,7 @@
 
 </div>
 
-</div> -->
+</div> 
         </div>  
 
 

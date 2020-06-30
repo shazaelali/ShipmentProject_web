@@ -1,27 +1,18 @@
 <?php 
      session_start();
-    
+
  ?>
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     
-   <!-- <link rel="stylesheet" type="text/css" href="css/signupStyle.css">
-   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
-    
-   <!--<script> src="javaScript.js"</script>-->
- 
-  
-   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <link rel="stylesheet"  href="css/contrat.css">
 
-       <title>Document</title>
+<title>Document</title>
 </head>
 <body >
 
@@ -32,7 +23,7 @@
              <h4 class="text-light font-weight-bold  m-2">Admin</h4>
           </div>
             <div class="menu">
-            <a href="admin.php" class="d-block  text-light p-3 " ><i class="fa fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
+                <a href="admin.php" class="d-block  text-light p-3 " ><i class="fa fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
                 Dashboard</a>
                 <a href="contrat.php " class="d-block  text-light p-3"><i class="fa fa-newspaper-o" aria-hidden="true" style="color: #EEE"></i>
                 Contart</a>
@@ -40,8 +31,8 @@
                 Company</a>
                 <a href="shipment.php" class="d-block text-light p-3"><i class="fa fa-truck" aria-hidden="true" style="color: #EEE"></i>
                 Shipment</a>
-                <a href="typeShipment.php" class="d-block text-light p-3"><i class="fa fa-file" style="color: #EEE"></i>
-                Type controle</a>
+                <a href="Typeshipment.php" class="d-block text-light p-3"><i class="fa fa-file" style="color: #EEE"></i>
+                 Type controle </a>
             </div>
       </div>
       <div class="w-100">
@@ -119,56 +110,31 @@
    <div class="col-sm-12 col-lg-12" style="">
        <div class="chart-container" style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
        <div>
-           <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-           <span style="color:#26B7D4; font-size: x-large;">Contart</span>
+          <i class="fa fa-file" >   </i>
+           <span style="color:#26B7D4; font-size: x-large;">Type Shippement</span>
         </div>
      <div class="card-body">
 
         <div id="bar-example" >
-        <form name="typeshippmentForm" action="insertContrat.php" method="post">
            
+          
+           <form name="typeshippmentForm" action="typeshippmentV.php" method="post">
+              
+              <div class="form-group">
+
+            <label for="shipmentTypeName" style=" color: #26B7D4;font-size: x-large;">Type Shippement Name </label>
+             <input type="text" class="form-control form-control-lg" id="shipmentTypeName" name="shipmentTypeName" placeholder="Type Shippement">
+            </div>
             <div class="form-group">
-               <label for="NameCompany " style=" color: #26B7D4;font-size: x-large;">Name Company</label>
-              <input type="text" class="form-control form-control-lg" id="NameCompany" name="NameCompany"  placeholder="Name Company">
-               
+
+            <label for="shipTime" style=" color: #26B7D4;font-size: x-large;">shipment Time</label>
+            <input type="text" class="form-control form-control-lg" id="shipTime" name="shipTime" placeholder="shipment Time">
              </div>
-
-             <div class="form-group">
-            <label for="Description" style=" color: #26B7D4;font-size: x-large;">Description</label>
-             <input type="text" class="form-control form-control-lg" id="Description" name="Description" placeholder="Description">
-            </div>
-
-            <div class="form-group">
-            <label for="DateContrat" style=" color: #26B7D4;font-size: x-large;">Date Contrat</label>
-             <input type="date" class="form-control form-control-lg" id="DateContrat" name="DateContrat" placeholder="Date Contrat">
-            </div>
-            <div class="form-group">
-            <label for="DateExpireContrat" style=" color: #26B7D4;font-size: x-large;">Date Expire Contrat</label>
-             <input type="date" class="form-control form-control-lg" id="DateExpireContrat" name="DateExpireContrat" placeholder="Date Expire Contrat">
-            </div>
-           
-            <label  style=" color: #26B7D4;font-size: x-large;">Type Shippement</label>
-            <select class="form-control form-control-lg" placeholder="Type Shippement" name="StShip">
-           
-            <?php 
-              include 'connect.php';
-              $q=" SELECT  `shipTypeID`,`TypeName` FROM `shippmenttype`" ;
-              $res=mysqli_query($connect,$q);
-             
-                while($row=mysqli_fetch_assoc($res))
-                   { 
-                      echo'<option values="'.$row['shipTypeID'].'">'.$row['TypeName'].'</option>';
-                   }
-            ?>
             
-               </select>
-           
-         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-         </div>
-           <button type="submit" class="btn btn-primary">Submit</button>
-           </form>
+              <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;"/>
+            
+             
+            </form>
         </div>
 
            </div>
@@ -176,6 +142,8 @@
 
 
    </div>
+
+   
 </div>
 
 
@@ -184,14 +152,81 @@
 <div class="col-lg-4 col-12">
 
 
-<div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-  
+<div class="row " style="min-height:200px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
+<div>
+          <i class="fa fa-file" >   </i>
+           <span style="color:#26B7D4; font-size: x-large;">Status</span>
+        </div>
+     <div class="card-body">
+
+        <div id="bar-example" >
+           
+          
+           <form name="StatusForm" action="status.php" method="post">
+              
+              <div class="form-group">
+
+
+            <label for="statusName" style=" color: #26B7D4;font-size: x-large;">Status Name </label>
+             <input type="text" class="form-control form-control-lg" id="statusName" name="statusName" placeholder="Status Name">
+            </div>
+            
+              <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;"/>
+            
+             
+            </form>
 
 
 </div>
 
 <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
   
+
+           
+          <!--  Ville -->
+           <form name="payForm" /*action="pay.php"*/ method="post">
+              
+              <div class="form-group">
+
+
+            <label for="statusName" style=" color: #26B7D4;font-size: x-large;">pay Name </label>
+             <input type="text" class="form-control form-control-lg" id="payName" name="payName" placeholder="pay Name">
+            </div>
+            
+              <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;"/>
+            
+             
+            </form>
+ <!--  Region -->
+          <form name="RegionForm"/*action="Region.php"*/ method="post">
+              <div class="form-group">
+
+
+            <label for="statusName" style=" color: #26B7D4;font-size: x-large;">Region Name </label>
+             <input type="text" class="form-control form-control-lg" id="RegionName" name="RegionName" placeholder="Region Name ">
+            </div>
+            
+              <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;"/>
+            
+             
+            </form>
+           <!--  Ville -->
+
+           <form name="VilleForm" /*action="Ville.php"*/ method="post">
+              
+              <div class="form-group">
+
+
+            <label for="statusName" style=" color: #26B7D4;font-size: x-large;">Ville Name </label>
+             <input type="text" class="form-control form-control-lg" id="VilleName" name="VilleName" placeholder="Ville Name">
+            </div>
+            
+              <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;"/>
+            
+             
+            </form>
+           
+
 
 
 </div>
