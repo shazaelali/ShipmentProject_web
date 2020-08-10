@@ -44,9 +44,9 @@
                 Type controle</a>
             </div>
       </div>
-      <div class="w-100">
+       <div class="w-100">
 
-      <nav class="navbar navbar-expand-lg navbar-light ">
+       <nav class="navbar navbar-expand-lg navbar-light ">
      <div class="container-fluid">
      <h3>
        Welcome  
@@ -85,127 +85,117 @@
     </div>
     </div>
      </nav>
-       <div id="content">
-       <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
+        <div id="content">
+            <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
 
-      <div class="row">
+              <div class="row">
 
-        <div class="col-12">
-         <div class="row">
-            <div class="col-6">
-              <div style="margin: 20px;">
-          
-              </div>
+               <div class="col-12">
+                   <div class="row">
+                       <div class="col-12">
+                           <div style="margin: 20px;">
+
+                           </div>
+                       </div>
+
+                   </div>
                </div>
-              <div class="col-6">
-
-              <div style="margin: 20px;">
-
-         
-          
-              </div>
-
-       
-           </div>
-     </div>
- </div>
-
-</div>
-  <div class="row">
-       <div class="col-lg-8 col-12">
-
-         <div class="row" >
-
-   <div class="col-sm-12 col-lg-12" style="">
-       <div class="chart-container" style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
-       <div>
-           <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-           <span style="color:#26B7D4; font-size: x-large;">Contart</span>
-        </div>
-     <div class="card-body">
-
-        <div id="bar-example" >
-        <form name="typeshippmentForm" action="insertContrat.php" method="post">
-           
-            <div class="form-group">
-               <label for="NameCompany " style=" color: #26B7D4;font-size: x-large;">Name Company</label>
-              <input type="text" class="form-control form-control-lg" id="NameCompany" name="NameCompany"  placeholder="Name Company">
-               
-             </div>
-
-             <div class="form-group">
-            <label for="Description" style=" color: #26B7D4;font-size: x-large;">Description</label>
-             <input type="text" class="form-control form-control-lg" id="Description" name="Description" placeholder="Description">
-            </div>
-
-            <div class="form-group">
-            <label for="DateContrat" style=" color: #26B7D4;font-size: x-large;">Date Contrat</label>
-             <input type="date" class="form-control form-control-lg" id="DateContrat" name="DateContrat" placeholder="Date Contrat">
-            </div>
-            <div class="form-group">
-            <label for="DateExpireContrat" style=" color: #26B7D4;font-size: x-large;">Date Expire Contrat</label>
-             <input type="date" class="form-control form-control-lg" id="DateExpireContrat" name="DateExpireContrat" placeholder="Date Expire Contrat">
-            </div>
-           
-            <label  style=" color: #26B7D4;font-size: x-large;">Type Shippement</label>
-            <select class="form-control form-control-lg" placeholder="Type Shippement" name="StShip">
-           
-            <?php 
-              include 'connect.php';
-              $q=" SELECT  `shipTypeID`,`TypeName` FROM `shippmenttype`" ;
-              $res=mysqli_query($connect,$q);
-             
-                while($row=mysqli_fetch_assoc($res))
-                   { 
-                      echo'<option values="'.$row['shipTypeID'].'">'.$row['TypeName'].'</option>';
-                   }
-            ?>
-            
-               </select>
-           
-         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-         </div>
-           <button type="submit" class="btn btn-primary">Submit</button>
-           </form>
-        </div>
 
            </div>
+              <div class="row">
+               <div class="col-lg-8 col-12">
+
+                   <div class="row">
+                       <div class="col-sm-12 col-lg-12">
+                           <div style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+                               <div>
+                                   <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                                   <span style="color:#26B7D4; font-size: x-large;">Contart</span>
+                               </div>
+                               <div class="card-body">
+
+                                   <form name="typeshippmentForm" action="insertContrat.php" method="post">
+
+                                       <div class="form-group">
+                                           <label for="NameCompany " style=" color: #26B7D4;font-size: x-large;">Name Company</label>
+                                           <input type="text" class="form-control form-control-lg" id="NameCompany" name="NameCompany" placeholder="Name Company">
+
+                                       </div>
+
+                                       <div class="form-group">
+                                           <label for="Description" style=" color: #26B7D4;font-size: x-large;">Description</label>
+                                           <input type="text" class="form-control form-control-lg" id="Description" name="Description" placeholder="Description">
+                                       </div>
+
+                                       <div class="form-group">
+                                           <label for="DateContrat" style=" color: #26B7D4;font-size: x-large;">Date Contrat</label>
+                                           <input type="date" class="form-control form-control-lg" id="DateContrat" name="DateContrat" placeholder="Date Contrat">
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="DateExpireContrat" style=" color: #26B7D4;font-size: x-large;">Date Expire Contrat</label>
+                                           <input type="date" class="form-control form-control-lg" id="DateExpireContrat" name="DateExpireContrat" placeholder="Date Expire Contrat">
+                                       </div>
+
+                                       <label style=" color: #26B7D4;font-size: x-large;">Type Shippement</label>
+                                       <select class="form-control form-control-lg" placeholder="Type Shippement" name="StShip">
+
+                                           <?php
+                                           include 'connect.php';
+                                           $q=" SELECT  `shipTypeID`,`TypeName` FROM `shippmenttype`" ;
+                                           $res=mysqli_query($connect,$q);
+
+                                           while($row=mysqli_fetch_assoc($res))
+                                           {
+                                           echo'
+                                           <option values="'.$row['shipTypeID'].'">'.$row['TypeName'].'</option>';
+                                           }
+                                           ?>
+
+                                       </select>
+
+                                       <div class="form-check">
+                                           <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                           <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                       </div>
+                                       <button type="submit" class="btn btn-primary">Submit</button>
+                                   </form>
+
+
+                               </div>
+                           </div>
+
+
+                       </div>
+                   </div>
+
+               </div>
+
+
+               <div class="col-lg-4 col-12">
+
+
+                   <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
+                   </div>
+
+
+                   <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
+
+
+
+                   </div>
+
+
+
+
+               </div>
+
+           </div>
+           </div>
+ 
        </div>
 
-
    </div>
-</div>
-
-
-</div>
-
-<div class="col-lg-4 col-12">
-
-
-<div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-  
-
-
-</div>
-
-<div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-  
-
-
-</div>
-
-
-</div>
-
-</div>
-</div>
-
-</div>
-
-</div>
-        </div>  
+</div>  
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

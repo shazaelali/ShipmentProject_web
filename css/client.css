@@ -1,0 +1,57 @@
+.image{
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.3)),url('../images/world.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+   
+    text-align: center;
+}
+.location{
+    position: relative;
+    background: white;
+    top: 15px;
+    height: 80px;
+    text-align: left;
+    padding: 15px;
+    border-radius: 5px;
+}
+.colorBleu{
+    color:#26B7D4;
+}
+.text{
+    font-size: larger;
+   
+    font-weight: 700
+}
+.logoImages{
+    border-radius: 50px;
+    max-height: 80px;
+}
+.SpanLocation{
+    font-weight: 600;
+   
+    font-size: larger;
+    color: #26B7D4;
+}
+.SpanLocationDate{
+  color:grey;
+}
+.satutsImages{
+    max-height: 80px;
+    padding: 15px;
+    border-radius: 50px;
+}
+.postioncenter{
+    text-align: center; 
+}
+.backDeatil{
+   
+   
+    background-color: #F5F5F5 ;
+}
+.marg{
+    margin: 5px;
+}
+.formdiv{
+    min-height:50px; ;border-radius: 5px;padding:5px;margin-bottom:20px;
+}

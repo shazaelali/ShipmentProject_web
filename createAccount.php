@@ -14,5 +14,5 @@ mysqli_query($connect,"INSERT INTO `users`(`IdUsers`, `FirstName`, `LastName`, `
 '$add','$em','$passHashed')");
  header('location:Login.html');
 }
-mysqli_close($connect);
+mysqli_close($connect); 
 ?>

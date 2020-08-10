@@ -2,8 +2,8 @@
      session_start();
  ?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
+ <html lang="en">
+ <head>
     
    <!-- <link rel="stylesheet" type="text/css" href="css/signupStyle.css">
    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
@@ -44,7 +44,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-light ">
      <div class="container-fluid">
-     <h3>
+      <h3>
        Welcome  
       <?php if(isset($_SESSION["name"])){echo  $_SESSION["name"];}else echo"error";?></h3>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +56,7 @@
          <li>
          
          </li>
-      <li class="nav-item dropdown">
+         <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          <img src="images/icon-delivery.png" alt="" class="img-fluid rounded-circle img mr-2">
           <?php 
@@ -81,179 +81,174 @@
     </div>
     </div>
      </nav>
-       <div id="content">
-       <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
-
-      <div class="row">
-
-        <div class="col-12">
-         <div class="row">
-            <div class="col-6">
-              <div style="margin: 20px;">
-          
-              </div>
-               </div>
-              <div class="col-6">
-
-              <div style="margin: 20px;">
-
-         
-          
-              </div>
-
        
+           <div id="content">
+              <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
+
+               <div class="row">
+
+                   <div class="col-12">
+                       <div class="row">
+
+                           <div class="col-12">
+                               <div style="margin: 20px;">
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+              </div>
+                 <div class="row">
+                     <div class="col-lg-12 col-12">
+
+                         <div class="row">
+
+                             <div class="col-sm-12 col-lg-12" style="">
+                                 <div style="background-color:white;min-height:400px; ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+                                     <div>
+                                         <i class="fa fa-building-o" aria-hidden="true"></i>
+                                         <span style="color:#26B7D4; font-size: x-large;"> Company</span>
+                                     </div>
+                                     <table class="table table-striped">
+                                         <thead>
+                                             <tr>
+                                                 <th scope="col">Id contrat</th>
+                                                 <th scope="col">Name Company</th>
+                                                 <th scope="col">Type Shipment</th>
+                                                 <th scope="col">Date </th>
+                                                 <th scope="col">Date Expire</th>
+                                                 <th scope="col">Decription</th>
+                                             </tr>
+                                         </thead>
+                                         <tbody>
+
+                                             <tr>
+                                                 <th scope="row">1</th>
+                                                 <td>Mark</td>
+                                                 <td>Otto</td>
+                                                 <td>@mdo</td>
+                                                 <td>@twitter</td>
+                                                 <td>Jacob</td>
+
+                                             </tr>
+                                             <tr>
+                                                 <th scope="row">2</th>
+                                                 <td>Jacob</td>
+                                                 <td>Thornton</td>
+                                                 <td>@fat</td>
+                                                 <td>Thornton</td>
+                                                 <td>@twitter</td>
+                                             </tr>
+                                             <tr>
+                                                 <th scope="row">3</th>
+                                                 <td>Larry</td>
+                                                 <td>the Bird</td>
+                                                 <td>@twitter</td>
+                                                 <td>@twitter</td>
+                                                 <td>@twitter</td>
+                                             </tr>
+                                             <tr>
+                                                 <th scope="row">4</th>
+                                                 <td>Mark</td>
+                                                 <td>Otto</td>
+                                                 <td>@mdo</td>
+                                                 <td>@twitter</td>
+                                                 <td>Jacob</td>
+
+                                             </tr>
+                                             <tr>
+                                                 <th scope="row">5</th>
+                                                 <td>Mark</td>
+                                                 <td>Otto</td>
+                                                 <td>@mdo</td>
+                                                 <td>@twitter</td>
+                                                 <td>Jacob</td>
+
+                                             </tr>
+
+                                         </tbody>
+                                     </table>
+                                 </div>
+
+
+                             </div>
+                         </div>
+                         <div class="row " style="min-height:400px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
+
+                               <table class="table table-striped">
+                                 <thead>
+                                     <tr>
+                                         <th scope="col">Id contrat</th>
+                                         <th scope="col">Name Company</th>
+                                         <th scope="col">Type Shipment</th>
+                                         <th scope="col">Date </th>
+                                         <th scope="col">Date Expire</th>
+                                         <th scope="col">Decription</th>
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     <tr>
+                                         <th scope="row">1</th>
+                                         <td>Mark</td>
+                                         <td>Otto</td>
+                                         <td>@mdo</td>
+                                         <td>@twitter</td>
+                                         <td>Jacob</td>
+
+                                     </tr>
+
+                                     <tr>
+                                         <th scope="row">2</th>
+                                         <td>Jacob</td>
+                                         <td>Thornton</td>
+                                         <td>@fat</td>
+                                         <td>Thornton</td>
+                                         <td>@twitter</td>
+                                     </tr>
+                                     <tr>
+                                         <th scope="row">3</th>
+                                         <td>Larry</td>
+                                         <td>the Bird</td>
+                                         <td>@twitter</td>
+                                         <td>@twitter</td>
+                                         <td>@twitter</td>
+                                     </tr>
+                                     <tr>
+                                         <th scope="row">4</th>
+                                         <td>Mark</td>
+                                         <td>Otto</td>
+                                         <td>@mdo</td>
+                                         <td>@twitter</td>
+                                         <td>Jacob</td>
+
+                                     </tr>
+                                     <tr>
+                                         <th scope="row">5</th>
+                                         <td>Mark</td>
+                                         <td>Otto</td>
+                                         <td>@mdo</td>
+                                         <td>@twitter</td>
+                                         <td>Jacob</td>
+
+                                     </tr>
+
+                                 </tbody>
+                             </table>
+
+                         </div>
+
+
+                     </div>
+
+
+
            </div>
+             </div>
+ 
+             </div>
+
      </div>
- </div>
-
-</div>
-  <div class="row">
-       <div class="col-lg-12 col-12">
-
-        <div class="row" >
-
-           <div class="col-sm-12 col-lg-12" style="">
-           <div style="background-color:white;min-height:400px; ;border-radius: 5px;padding:15px;margin-bottom:20px;">
-           <div>
-           <i class="fa fa-building-o" aria-hidden="true"></i>
-           <span style="color:#26B7D4; font-size: x-large;"> Company</span>
-           </div>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-            <th scope="col">Id contrat</th>
-            <th scope="col">Name Company</th>
-            <th scope="col">Type Shipment</th>
-            <th scope="col">Date </th>
-            <th scope="col">Date Expire</th>
-            <th scope="col">Decription</th>
-           </tr>
-          </thead>
-           <tbody>
-             <tr>  <th scope="row">1</th>
-                    <td>Mark</td>
-                     <td>Otto</td>
-                     <td>@mdo</td>
-                     <td>@twitter</td>
-                     <td>Jacob</td>
-                   
-             </tr>
-      
-              <tr>
-                 <th scope="row">2</th>
-                 <td>Jacob</td>
-                 <td>Thornton</td>
-                 <td>@fat</td>
-                 <td>Thornton</td>
-                 <td>@twitter</td>
-               </tr>
-               <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-               </tr>
-               <tr>  <th scope="row">4</th>
-                    <td>Mark</td>
-                     <td>Otto</td>
-                     <td>@mdo</td>
-                     <td>@twitter</td>
-                     <td>Jacob</td>
-                   
-             </tr>
-             <tr>  
-                 <th scope="row">5</th>
-                    <td>Mark</td>
-                     <td>Otto</td>
-                     <td>@mdo</td>
-                     <td>@twitter</td>
-                     <td>Jacob</td>
-                   
-             </tr>
-      
-            </tbody>
-        </table>
-      </div>
-
-
-      </div>
-   </div>
-   <div class="row " style="min-height:400px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-  
-   <table class="table table-striped">
-            <thead>
-            <tr>
-            <th scope="col">Id contrat</th>
-            <th scope="col">Name Company</th>
-            <th scope="col">Type Shipment</th>
-            <th scope="col">Date </th>
-            <th scope="col">Date Expire</th>
-            <th scope="col">Decription</th>
-           </tr>
-          </thead>
-           <tbody>
-             <tr>  <th scope="row">1</th>
-                    <td>Mark</td>
-                     <td>Otto</td>
-                     <td>@mdo</td>
-                     <td>@twitter</td>
-                     <td>Jacob</td>
-                   
-             </tr>
-      
-              <tr>
-                 <th scope="row">2</th>
-                 <td>Jacob</td>
-                 <td>Thornton</td>
-                 <td>@fat</td>
-                 <td>Thornton</td>
-                 <td>@twitter</td>
-               </tr>
-               <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-               </tr>
-               <tr>  <th scope="row">4</th>
-                    <td>Mark</td>
-                     <td>Otto</td>
-                     <td>@mdo</td>
-                     <td>@twitter</td>
-                     <td>Jacob</td>
-                   
-             </tr>
-             <tr>  
-                 <th scope="row">5</th>
-                    <td>Mark</td>
-                     <td>Otto</td>
-                     <td>@mdo</td>
-                     <td>@twitter</td>
-                     <td>Jacob</td>
-                   
-             </tr>
-      
-            </tbody>
-        </table>
-
-    </div>
-
-
-</div>
-
-
-
-</div>
-</div>
-
-</div>
-
-</div>
-        </div>  
+  </div>  
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
