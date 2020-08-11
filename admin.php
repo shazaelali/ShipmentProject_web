@@ -1,6 +1,19 @@
 <?php 
      session_start();
+
  ?>
+ <?php
+       include 'connect.php';
+         $q=" SELECT * FROM `pages`" ;
+
+         $res=mysqli_query($connect,$q);
+
+         // while($row=mysqli_fetch_assoc($res))
+          // {
+           // echo'
+                   //<option values="'.$row['IdRegion'].'">'.$row['regionName'].'</option>';
+                   // }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,26 +35,17 @@
                 <h4 class="text-light font-weight-bold  m-2">Admin</h4>
             </div>
             <div class="menu">
-                <a href="admin.php" class="d-block  text-light p-3 ">
-                    <i class="fa fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
-                    Dashboard
-                </a>
-                <a href="contrat.php " class="d-block  text-light p-3">
-                    <i class="fa fa-newspaper-o" aria-hidden="true" style="color: #EEE"></i>
-                    Contart
-                </a>
-                <a href="company.php" class="d-block text-light p-3">
-                    <i class="fa fa-building-o" aria-hidden="true" style="color: #EEE"></i>
-                    Company
-                </a>
-                <a href="shipment.php" class="d-block text-light p-3">
-                    <i class="fa fa-truck" aria-hidden="true" style="color: #EEE"></i>
-                    Shipment
-                </a>
-                <a href="typeShipment.php" class="d-block text-light p-3">
-                    <i class="fa fa-file" style="color: #EEE"></i>
-                    Type controle
-                </a>
+            <?php 
+                       while($row=mysqli_fetch_assoc($res))
+                     {   
+                    ?>
+                 <a href="<?php echo $row['pageId'];?>" class="d-block  text-light p-3 ">
+                     
+                     <i class="fa fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
+                    
+                     <?php echo $row['pageTitle']; ?>
+                 </a>
+                     <?php }?>
             </div>
         </div>
         <div class="w-100">

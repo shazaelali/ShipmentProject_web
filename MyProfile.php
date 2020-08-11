@@ -19,89 +19,60 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<link rel="stylesheet"  href="css/contrat.css">
+  <link rel="stylesheet"  href="css/contrat.css">
 
        <title>Document</title>
 </head>
 <body >
 
 
-  <div class="d-flex">
+  <div class="d-flex" >
       <div id="sidbar-container" class=" btn-pramiry">
           <div class="logo ">
              <h4 class="text-light font-weight-bold  m-2">Admin</h4>
           </div>
             <div class="menu">
-            <a href="admin.php" class="d-block  text-light p-3 " ><i class="fa fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
+            <a href="admin.php" class="d-block  text-light p-3 " ><i class="fa faIcon fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
                 Dashboard</a>
-                <a href="contrat.php " class="d-block  text-light p-3"><i class="fa fa-newspaper-o" aria-hidden="true" style="color: #EEE"></i>
+                <a href="contrat.php " class="d-block  text-light p-3"><i class="fa faIcon fa-newspaper-o" aria-hidden="true" style="color: #EEE"></i>
                 Contart</a>
-                <a href="company.php" class="d-block text-light p-3"><i class="fa fa-building-o" aria-hidden="true"style="color: #EEE"></i>
+                <a href="company.php" class="d-block text-light p-3"><i class="fa faIcon fa-building-o" aria-hidden="true"style="color: #EEE"></i>
                 Company</a>
-                <a href="shipment.php" class="d-block text-light p-3"><i class="fa fa-truck" aria-hidden="true" style="color: #EEE"></i>
+                <a href="shipment.php" class="d-block text-light p-3"><i class="fa faIcon fa-truck" aria-hidden="true" style="color: #EEE"></i>
                 Shipment</a>
-                <a href="typeShipment.php" class="d-block text-light p-3"><i class="fa fa-file" style="color: #EEE"></i>
+                <a href="typeShipment.php" class="d-block text-light p-3"><i class="fa faIcon fa-file" style="color: #EEE"></i>
                 Type controle</a>
             </div>
       </div>
        <div class="w-100">
 
-       <nav class="navbar navbar-expand-lg navbar-light ">
-     <div class="container-fluid">
-     <h3>
-       Welcome  
-      <?php if(isset($_SESSION["name"])){echo  $_SESSION["name"];}else echo"error";?></h3>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-
-     <div class="collapse navbar-collapse " id="navbarSupportedContent">
-       <ul class="navbar-nav ml-auto">
-         <li>
-         
-         </li>
-      <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <img src="images/icon-delivery.png" alt="" class="img-fluid rounded-circle img mr-2">
-          <?php 
-          
-       if(isset($_SESSION["name"])){
-            echo  $_SESSION["name"];
-        }
-        
-        else echo"error";
-        ?>
-         </a>
-         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item paddingMenu" href="#" style="padding: 0px;" ><i class="fa fa-user" aria-hidden="true"></i>My Profile</a>
-          <a class="dropdown-item" href="#"></a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item paddingMenu" href="LogOut.php"style="padding: 0px;" > <i class="fa fa-sign-out" aria-hidden="true"></i>logOut</a>
-        </div>
-      </li>
-    
-      </ul>
-  
-    </div>
-    </div>
-     </nav>
-        <div id="content">
-            <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
+           <div id="content"style="height:100%;overflow:auto;background-color:#F5F5F5">
+            <div class="container-fluid" >
 
               <div class="row">
 
                <div class="col-12">
                    <div class="row">
-                       <div class="col-12">
-                           <div style="margin: 20px;">
+                       <div class="col-6">
+                           <div style="margin:10px;">
+                              <span style="color: #26B7D4;">My Profile</span>
+                           </div>
+                       </div>
+                       <div class="col-6">
+                           <div style="margin:10px;float: right">
+                              
+                             
+                              <a class="" href="LogOut.php"style="padding: 0px; color: #212529;" > LogOut </a>
+                              <i class="faIcon fa fa-sign-out" aria-hidden="true"></i>
 
+                             
                            </div>
                        </div>
 
                    </div>
                </div>
 
-           </div>
+            </div>
               <div class="row">
                <div class="col-lg-6 col-12">
 
@@ -115,12 +86,23 @@
                                <div class="card-body">
                                   <div class="row">
                                       <div class="col-6">
-                                         <img src="" alt=""/>
+                                         <img src="images/<?php 
+          
+                                                if(isset($_SESSION['Profile'])){
+                                                 echo  $_SESSION['Profile'];
+                                          }?>" 
+                                          alt="" class="img-fluid rounded-circle  mr-2"
+                                           width="150px" height="150px"/>
 
                                       </div>
                                       <div class="col-6">
                                         <div class="div">Full Name</div>
-                                        <input type="text" id="" name="">
+                                          <form action="" method="post">
+                                                <input type="text" id="" name=""
+                                                 value="<?php if(isset($_SESSION["name"])){echo  $_SESSION["name"];}else echo"error";?> ">
+                                          </form>
+                                        
+                                          
                                        
                                       </div>
                                   </div>
@@ -144,7 +126,13 @@
                                     <tbody>
 									<tr style="border-bottom:1pt solid #DCDCDC;height: 53px">
                                         <td style="width:1px">
-                                      
+                                          <img src="images/<?php 
+          
+                                                 if(isset($_SESSION['Profile'])){
+                                                     echo  $_SESSION['Profile'];
+                                                     }?>" 
+                                                     alt="" width="40px" height="40px"
+                                                     class="img-fluid rounded-circle  mr-2"/>
                                         </td>
                                         <td>
                                             <label class="m-0" for="user_nick_name" style="margin:0;color: #707070;font-size:14px;font-family: DIN_Next_CYR_Regular">
@@ -153,14 +141,17 @@
                                         </td>
                                         <td>
                                             <div class="" style="display: inline-block;float: right;">
-                                                <span class="small" style=" color:#26b7d4;">shaza Elali</span>
+                                                <span class="small" style=" color:#26b7d4;"> 
+                                                <?php if(isset($_SESSION["name"])){
+                                                    echo  $_SESSION["name"];}else echo"error";?>
+                                                </span>
 
                                             </div>
                                         </td>
                                     </tr>
                                     <tr style="border-bottom:1pt solid #DCDCDC;height: 53px">
                                         <td style="width:1px">
-                                           <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                           <img src="images/location.png" alt="" width="40px" height="40px"/>
                                         </td>
                                         <td>
                                             <label class="m-0" for="user_location" style="margin:0;color: #707070;font-size:14px;font-family: DIN_Next_CYR_Regular">
@@ -169,15 +160,20 @@
                                         </td>
                                         <td>
                                             <div class="" style="display: inline-block;float: right;">
-                                                    <img src="/Assets/img/flags/LB.png" width="15">
-                                                    <span class="small" style=" color #26b7d4;">LB</span>
-
+                                                  
+                                                    <span class="small" style=" color #26b7d4;">
+                                                    <?php 
+                                                    if(isset($_SESSION['location'])){
+                                                    echo $_SESSION['location'];}else echo"error";?>
+                                                    </span>
+                                              
+         
                                             </div>
                                         </td>
                                     </tr>
                                     <tr style="border-bottom:1pt solid #DCDCDC;height: 53px">
                                         <td style="width:1px">
-                                           <i class="fa fa-transgender" aria-hidden="true"></i>
+                                           <img src="images/genders.png" alt="" width="40px" height="40px"/>
                                         </td>
                                         <td>
                                             <label class="m-0" for="user_gender" style="margin:0;color: #707070;font-size:14px;font-family: DIN_Next_CYR_Regular">
@@ -187,17 +183,21 @@
                                         <td>
 
                                             <div style="display: inline-block;float: right;">
-                                                <div class="dropdown">
-                                                    <div class="btn" id="user_gender" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span>Female<img src="/Assets/img/female.png" width="15" class="ml-1"></span><img src="/Assets/img/droparrow.png" width="10" class="ml-2">
+                                            
+                                                                <span>
+                                                                <?php 
+                                                                    if(isset($_SESSION['Gender'])){
+                                                                       echo  $_SESSION['Gender'];}else echo"error";?>
+                                                                <!--<img src="images/female.png" width="15" class="ml-1">--></span>
+                                                                <!--<img src="images/droparrow.png" width="10" class="ml-2">-->
 
-                                                    </div>
-                                                    <div class="dropdown-menu dropdown_gender dropdown-menu-right" aria-labelledby="user_gender" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(83px, 24px, 0px);">
-                                                        <a class="dropdown-item" data-name="male" href="javascript:void(0)" onclick="">Male<img src="/Assets/img/male.png" class="ml-1" width="15"></a>
+                                                  
+                                                   <!-- <div class="dropdown-menu dropdown_gender dropdown-menu-right" aria-labelledby="user_gender" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(83px, 24px, 0px);">
+                                                        <a class="dropdown-item" data-name="male" href="javascript:void(0)" onclick="">Male<img src="images/male.png" class="ml-1" width="15"></a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item" data-name="female" href="javascript:void(0)" onclick="">Female<img src="/Assets/img/female.png" class="ml-1" width="15"></a>
-                                                    </div>
-                                                </div>
+                                                        <a class="dropdown-item" data-name="female" href="javascript:void(0)" onclick="">Female<img src="images/female.png" class="ml-1" width="15"></a>
+                                                    </div>-->
+                                              
 
                                                 
                                             </div>
@@ -205,7 +205,8 @@
                                     </tr>
                                     <tr style="height: 53px">
                                         <td style="width:1px">
-                                           <i class="fas  fa fa-envelope"></i>
+                                           
+                                           <i class="fa fa-envelope" aria-hidden="true" style="color:#70707061!important;font-size: 29px"></i>
                                         </td>
                                         <td>
                                             <label class="m-0" for="user_phone_number" style="margin:0;color: #707070;font-size:14px;font-family: DIN_Next_CYR_Regular">
@@ -216,7 +217,12 @@
                                             <div style="float:right;font-size:14px;color:#707070">
                                                   
                                                    
-                                                    <span class="large" style=" color #26b7d4;">shazaelali@gmail.com</span>
+                                                    
+                                                     <span class="small" style=" color #26b7d4;">
+                                                    <?php 
+                                                    if(isset( $_SESSION['Email'])){
+                                                    echo  $_SESSION['Email'];}else echo"error";?>
+                                                    </span>
 
                                             
                                             </div>
@@ -232,6 +238,7 @@
 
                        </div>
                    </div>
+                   
                </div>
 
 

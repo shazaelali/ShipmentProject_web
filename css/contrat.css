@@ -37,8 +37,8 @@ a:hover{ text-decoration: none; }
     max-height: 40px;
 }
  
-.fa{
-    font-size: 29px; 
+.faIcon{
+    font-size: 22px; 
     padding: 10px 12px;
     color: #26B7D4;
 }

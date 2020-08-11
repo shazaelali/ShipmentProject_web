@@ -18,6 +18,10 @@ if(mysqli_num_rows($res)==1){//>0 plusieur email meme password /==1 email avec p
          // session_start();
             $_SESSION['id']=$row["IdUsers"];
             $_SESSION['name']=$row["FirstName"]." ".$row["LastName"];
+            $_SESSION['location']=$row["Address"];
+            $_SESSION['Email']=$row["Email"];
+            $_SESSION['Gender']=$row["Gender"];
+            $_SESSION['Profile']=$row["imgUser"];
 
             header('location:admin.php');
           }
@@ -26,6 +30,9 @@ if(mysqli_num_rows($res)==1){//>0 plusieur email meme password /==1 email avec p
     
           $_SESSION['id']=$row["IdUsers"];
           $_SESSION['name']=$row["FirstName"]." ".$row["LastName"];
+          $_SESSION['location']=$row["Address"];
+          $_SESSION['Email']=$row["Email"];
+          
        
          
            header('location:loggedIn.php');
