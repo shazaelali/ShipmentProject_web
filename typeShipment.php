@@ -130,8 +130,43 @@
 
 
                               </div>
+                               
 
 
+                          </div>
+                          <div class="row">
+                          <div class="col-sm-12 col-lg-12">
+                                  <div style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+                                      <div>
+                                          <i class="fa fa-file">   </i>
+                                          <span style="color:#26B7D4; font-size: x-large;">Company </span>
+                                      </div>
+                                      <div class="card-body">
+                                          <form name="CompanyForm" action="CompanyInsert.php" method="post">
+
+
+                                              <div class="form-group">
+
+                                                  <label for="CompanyName" style=" color: #26B7D4;font-size: x-large;">Company Name </label>
+                                                  <input type="text" class="form-control form-control-lg" id="CompanyId" name="CompanyName" placeholder="Company Name">
+                                              </div>
+                                              <div class="form-group">
+
+                                                  <label for="CompanyDec" style=" color: #26B7D4;font-size: x-large;">Company Decription</label>
+                                                  <input type="text" class="form-control form-control-lg" id="CompanyDec" name="CompanyDec" placeholder="Company Decription">
+                                              </div>
+                                              <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
+
+
+                                          </form>
+
+
+                                      </div>
+
+                                  </div>
+
+
+                              </div>
                           </div>
 
 
@@ -161,53 +196,8 @@
 
                                   <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
 
-
-
-                                      <!--  Ville -->
-                                      <form name="payForm">
-                                          *action="pay.php"*/ method="post">
-
-                                          <div class="form-group">
-
-
-                                              <label for="statusName" style=" color: #26B7D4;font-size: x-large;">pay Name </label>
-                                              <input type="text" class="form-control form-control-lg" id="payName" name="payName" placeholder="pay Name">
-                                          </div>
-
-                                          <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
-
-
-                                      </form>
-                                      <!--  Region -->
-                                      <form name="RegionForm">
-                                          *action="Region.php"*/ method="post">
-                                          <div class="form-group">
-
-
-                                              <label for="statusName" style=" color: #26B7D4;font-size: x-large;">Region Name </label>
-                                              <input type="text" class="form-control form-control-lg" id="RegionName" name="RegionName" placeholder="Region Name ">
-                                          </div>
-
-                                          <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
-
-
-                                      </form>
-                                      <!--  Ville -->
-
-                                      <form name="VilleForm">
-                                          *action="Ville.php"*/ method="post">
-
-                                          <div class="form-group">
-
-
-                                              <label for="statusName" style=" color: #26B7D4;font-size: x-large;">Ville Name </label>
-                                              <input type="text" class="form-control form-control-lg" id="VilleName" name="VilleName" placeholder="Ville Name">
-                                          </div>
-
-                                          <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
-
-
-                                      </form>
+                                        
+                                  
 
 
 

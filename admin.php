@@ -29,24 +29,23 @@
 
 
     <div class="d-flex">
-        <div id="sidbar-container" class=" btn-pramiry">
-            <div class="logo ">
-                <h4 class="text-light font-weight-bold  m-2">Admin</h4>
-            </div>
+    <div id="sidbar-container" class=" btn-pramiry">
+          <div class="logo ">
+             <h4 class="text-light font-weight-bold  m-2">Admin</h4>
+          </div>
             <div class="menu">
-            <?php 
-                       while($row=mysqli_fetch_assoc($res))
-                     {   
-                    ?>
-                 <a href="<?php echo $row['pageId'];?>" class="d-block  text-light p-3 ">
-                     
-                     <i class="fa fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
-                    
-                     <?php echo $row['pageTitle']; ?>
-                 </a>
-                     <?php }?>
+            <a href="admin.php" class="d-block  text-light p-3 " ><i class="fa faIcon fa-tachometer w" aria-hidden="true" style="color: #EEE"></i>
+                Dashboard</a>
+                <a href="contrat.php " class="d-block  text-light p-3"><i class="fa faIcon fa-newspaper-o" aria-hidden="true" style="color: #EEE"></i>
+                Contart</a>
+                <a href="company.php" class="d-block text-light p-3"><i class="fa faIcon fa-building-o" aria-hidden="true"style="color: #EEE"></i>
+                Company</a>
+                <a href="shipment.php" class="d-block text-light p-3"><i class="fa faIcon fa-truck" aria-hidden="true" style="color: #EEE"></i>
+                Shipment</a>
+                <a href="typeShipment.php" class="d-block text-light p-3"><i class="fa faIcon fa-file" style="color: #EEE"></i>
+                Type controle</a>
             </div>
-        </div>
+      </div>
         <div class="w-100">
 
             <nav class="navbar navbar-expand-lg navbar-light ">

@@ -10,17 +10,20 @@
     
    <!--<script> src="javaScript.js"</script>-->
  
-  
+    
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <link rel="stylesheet"  href="css/contrat.css">
 
        <title>Document</title>
 </head>
+
 <body >
 
 
@@ -116,6 +119,22 @@
 
                                         <div id="bar-example">
                                             <form name="shippmentForm" action="insertShipment.php" method="post">
+                                            <label style=" color: #26B7D4;font-size: x-large;">Name client</label>
+                                                <select class="form-control form-control-lg" placeholder="Name client" name="NameClient" id="NameClient">
+
+                                                    <?php
+                                                    include 'connect.php';
+                                                    $q = 'SELECT * FROM users WHERE Account ="Client" GROUP BY Account';  
+                                                    $res=mysqli_query($connect,$q);
+
+                                                    while($row=mysqli_fetch_assoc($res))
+                                                    {
+                                                    echo'
+                                                    <option values="'.$row['IdUsers'].'">'.$row['FirstName']." ".$row['LastName'].'</option>';
+                                                    }
+                                                    ?>
+
+                                                </select>
                                                 <div class="form-group">
                                                     <label for="From" style=" color: #26B7D4;font-size: x-large;">From</label>
                                                     <input type="text" class="form-control form-control-lg" id="From" name="From" placeholder="From">
@@ -132,6 +151,10 @@
                                                     <input type="date" class="form-control form-control-lg" id="Date" name="Date" placeholder="Date ">
                                                 </div>
                                                 <div class="form-group">
+                                                    <label for="Date" style=" color: #26B7D4;font-size: x-large;"> Date Estimate </label>
+                                                    <input type="date" class="form-control form-control-lg" id="DateEstimate" name="DateEstimate" placeholder="Date Estimate ">
+                                                </div>
+                                                <div class="form-group">
                                                     <label for="Weight" style=" color: #26B7D4;font-size: x-large;">Weight</label>
                                                     <input type="text" class="form-control form-control-lg" id="Weight" name="Weight" placeholder="Weight">
                                                 </div>
@@ -141,6 +164,41 @@
                                                 </div>
 
 
+                                                  
+
+                                                <label style=" color: #26B7D4;font-size: x-large;">pay</label>
+                                                <select class="form-control form-control-lg" placeholder="pay" name="pay" id="pay" onchange="myFunction(this.value)">
+
+                                                    <?php
+                                                    include 'connect.php';
+                                                    $q=" SELECT `IdPay`, `NamePay` FROM `pay`" ;
+                                                    $res=mysqli_query($connect,$q);
+
+                                                    while($row=mysqli_fetch_assoc($res))
+                                                    {
+                                                    echo'
+                                                    <option values="'.$row['IdPay'].'">'.$row['NamePay'].'</option>';
+                                                    }
+                                                    ?>
+
+                                                </select>
+                                                <label style=" color: #26B7D4;font-size: x-large;">Ville</label>
+                                                <select class="form-control form-control-lg" placeholder="Ville" name="Ville" id="getville">
+
+                                                    <?php
+                                                    include 'connect.php';
+                                                    $q=" SELECT `IdVille`, `NameVille`, `IdPay` FROM `ville`" ;
+                                                    $res=mysqli_query($connect,$q);
+
+                                                    while($row=mysqli_fetch_assoc($res))
+                                                    {
+                                                    echo'
+                                                    <option values="'.$row['IdVille'].'">'.$row['NameVille'].'</option>';
+                                                    }
+                                                    ?>
+
+                                                </select>
+                                                  
                                                 <label style=" color: #26B7D4;font-size: x-large;">Region</label>
                                                 <select class="form-control form-control-lg" placeholder="Region" name="Region">
 
@@ -159,40 +217,8 @@
 
                                                 </select>
 
-                                                <label style=" color: #26B7D4;font-size: x-large;">Ville</label>
-                                                <select class="form-control form-control-lg" placeholder="Ville" name="Ville">
+                                               
 
-                                                    <?php
-                                                    include 'connect.php';
-                                                    $q=" SELECT `IdVille`, `NameVille`, `IdPay` FROM `ville`" ;
-                                                    $res=mysqli_query($connect,$q);
-
-                                                    while($row=mysqli_fetch_assoc($res))
-                                                    {
-                                                    echo'
-                                                    <option values="'.$row['IdVille'].'">'.$row['NameVille'].'</option>';
-                                                    }
-                                                    ?>
-
-                                                </select>
-
-
-                                                <label style=" color: #26B7D4;font-size: x-large;">pay</label>
-                                                <select class="form-control form-control-lg" placeholder="pay" name="pay">
-
-                                                    <?php
-                                                    include 'connect.php';
-                                                    $q=" SELECT `IdPay`, `NamePay` FROM `pay`" ;
-                                                    $res=mysqli_query($connect,$q);
-
-                                                    while($row=mysqli_fetch_assoc($res))
-                                                    {
-                                                    echo'
-                                                    <option values="'.$row['IdPay'].'">'.$row['NamePay'].'</option>';
-                                                    }
-                                                    ?>
-
-                                                </select>
 
 
 
@@ -275,6 +301,18 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
+      <Script type="text/javascript">
+          function myFunction(dataValue) {
+              $.ajax({
+                  url:'Ville.php',
+                  type:'POST',
+                  data:{ datapost: dataValue},
+                  success: function(result){
+                      $('#getville').html(result);
+                  }
+              });
+  
+                       }
+     </script>
 </body>
 </html>

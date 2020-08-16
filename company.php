@@ -99,12 +99,13 @@
 
               </div>
                  <div class="row">
-                     <div class="col-lg-12 col-12">
+                     <div class="col-lg-8 col-12">
 
                          <div class="row">
 
                              <div class="col-sm-12 col-lg-12" style="">
                                  <div style="background-color:white;min-height:400px; ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+                                   
                                      <div>
                                          <i class="fa fa-building-o" aria-hidden="true"></i>
                                          <span style="color:#26B7D4; font-size: x-large;"> Company</span>

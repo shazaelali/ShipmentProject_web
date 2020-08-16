@@ -117,8 +117,22 @@
                                    <form name="typeshippmentForm" action="insertContrat.php" method="post">
 
                                        <div class="form-group">
-                                           <label for="NameCompany " style=" color: #26B7D4;font-size: x-large;">Name Company</label>
-                                           <input type="text" class="form-control form-control-lg" id="NameCompany" name="NameCompany" placeholder="Name Company">
+                                       <label style=" color: #26B7D4;font-size: x-large;">Comanys Name</label>
+                                                <select class="form-control form-control-lg" placeholder="Comany Name" name="nameCompany">
+
+                                                    <?php
+                                                    include 'connect.php';
+                                                    $q="SELECT `IdEntreprise`, `NameEntreprise`, `Description` FROM `entreprise`" ;
+                                                    $res=mysqli_query($connect,$q);
+
+                                                    while($row=mysqli_fetch_assoc($res))
+                                                    {
+                                                    echo'
+                                                    <option values="'.$row['IdEntreprise'].'">'.$row['NameEntreprise'].'</option>';
+                                                    }
+                                                    ?>
+
+                                                </select>
 
                                        </div>
 
@@ -153,10 +167,7 @@
 
                                        </select>
 
-                                       <div class="form-check">
-                                           <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                           <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                       </div>
+                                      
                                        <button type="submit" class="btn btn-primary">Submit</button>
                                    </form>
 
@@ -176,11 +187,11 @@
 
                    <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
                    </div>
-
+                    
 
                    <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
 
-
+                 
 
                    </div>
 
