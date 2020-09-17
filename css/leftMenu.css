@@ -1,0 +1,44 @@
+/** ======================  menu==============================**/
+#sidbar-container{
+    min-height: 100vh;
+    background-color:	#585858;
+}
+a:hover{ text-decoration: none; }
+
+#sidbar-container .logo{
+ padding: .875rem 1.25rem;
+
+}
+#sidbar-container .menu{
+
+    width:18rem;
+}
+.bg-light{
+   background-color:#ffffff ;
+}
+.img{
+    max-width:  40px;
+    max-height: 40px;
+}
+i{
+    font-size: 29px;
+    padding: 9px;
+}
+.fa{
+    font-size: 29px; 
+    padding: 10px 12px;
+}
+.paddingMenu{
+    padding:5px 5px;
+}
+#content{
+    overflow-y: auto;
+    height:100vh;
+    padding-bottom: 5rem;
+}
+.formDiv{
+    background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;
+}
+.heightDiv{
+    height: 220px;
+}

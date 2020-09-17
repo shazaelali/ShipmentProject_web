@@ -1,0 +1,16 @@
+/** ======================  tous les couleur ==============================**/
+
+:root{
+    --primary:#111B54;
+    --light:#ffffff;
+    --grey:#efefef;
+}
+.w{
+    color:#ffffff;
+}
+body{ overflow: hidden;/**scrole**/
+    font-weight: 300; color:#111B54; list-style: 26px;font-family: 'Roboto', sans-serif; }
+
+/** ======================  base css ==============================**/
+
+
