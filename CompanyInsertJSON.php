@@ -1,7 +1,7 @@
 <?php
    include 'connect.php';
  
-   $q="SELECT * FROM `entreprise`";
+   $q="SELECT *FROM `contract`,`entreprise` WHERE contract.NameEntreprise = entreprise.NameEntreprise";
    $res=mysqli_query($connect,$q);
    
    if(mysqli_num_rows($res)>0){

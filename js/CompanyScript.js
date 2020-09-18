@@ -11,12 +11,13 @@
            console.log(myJISON);
            for(i in myJISON ){
            $("table").append('<tr>');
-           $("table").append('<th scope="row">'+ myJISON[i].IdEntreprise +'</th>');
+           $("table").append('<th scope="row">'+ myJISON[i].IdContract +'</th>');
            $("table").append('<td>'+ myJISON[i].NameEntreprise +'</td>');
-           $("table").append("");
-           $("table").append("");
-           $("table").append("");
-           $("table").append("");
+           $("table").append('<td>'+ myJISON[i].TypeShipmentName +'</td>');
+           $("table").append('<td>'+ myJISON[i].dateContarct +'</td>');
+           $("table").append('<td>'+ myJISON[i].dateExpire +'</td>');
+           $("table").append('<td>'+ myJISON[i].descriptionContract +'</td>');
+           $("table").append('<td>'+ myJISON[i].DescriptionEntreprise +'</td>');
            }
         }
  
