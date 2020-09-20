@@ -116,7 +116,42 @@
 
                               </div>
                           </div>
+                          <div class="row">
+                          <div class="col-sm-12 col-lg-12">
 
+                           <div style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+                              <div>
+                                  <i class="fa fa-file">   </i>
+                                  <span style="color:#26B7D4; font-size: x-large;"> Description update Details</span>
+                              </div>
+                              <div class="card-body">
+
+                                  <form name="DescriptionDetails" action="DescriptionDetails.php" method="post">
+
+                                      <div class="form-group">
+
+
+                                          <label for="" style=" color: #26B7D4;font-size: x-large;"> </label>
+                                          <input type="text" class="form-control form-control-lg"  name="DescriptionDetails" placeholder="Description update Details">
+                                      </div>
+                                     
+
+                                      <input type="submit" value="Create" class="btn btn-outline-dark" />
+                                      <input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
+
+
+                                  </form>
+
+                                 
+
+
+                              </div>
+
+                          </div>
+
+
+                              </div>
+                          </div>
 
                       </div>
 
@@ -128,36 +163,100 @@
                               </div>
                               <div class="card-body">
 
-                                  <form name="StatusForm" action="status.php" method="post">
+                                  <form name="StatusForm" action="status.php" method="post" >
 
                                       <div class="form-group">
 
 
                                           <label for="statusName" style=" color: #26B7D4;font-size: x-large;">Status Name </label>
+                                         
                                           <input type="text" class="form-control form-control-lg" id="statusName" name="statusName" placeholder="Status Name">
-                                      </div>
 
+                                       
+                                      </div>
+                                         
                                       <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
 
 
                                   </form>
-
-                                  <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-
-                                        
-                                  
-
-
-
-
-                                  </div>
-
+                                 
+                                
+                                 
+                                  <form action="upload.php" method="POST" enctype="multipart/form-data">
+                                         <input type="file" name="file"/>
+	                                      <button type="submit" name="submit">
+	                                          UPLOAD IMG
+	                                          </button>
+                                   </form>
 
                               </div>
 
                           </div>
-                      </div>
+                          <div class="row " style="min-height:200px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
+                             <form name="location" action="location.php" method="post" >
+ 
+                                  <div>
+                                  <i class="fa fa-file">   </i>
+                                  <span style="color:#26B7D4; font-size: x-large;">Pays</span>
+                                  </div>
 
+                                   <div class="card-body">
+
+                                      <div class="form-group">
+
+                                          <label for="Pays" style=" color: #26B7D4;font-size: x-large;">Pays </label>
+                                         
+                                          <input type="text" class="form-control form-control-lg"  name="Pays" placeholder="Pays Name">
+
+                                      </div>
+                                 
+                                   </div>
+                                   <div>
+
+                                  <i class="fa fa-file">   </i>
+                                  <span style="color:#26B7D4; font-size: x-large;">Ville</span>
+                                  </div>
+
+                                   <div class="card-body">
+
+                                      <div class="form-group">
+
+                                          <label for="Ville" style=" color: #26B7D4;font-size: x-large;">Ville </label>
+                                         
+                                          <input type="text" class="form-control form-control-lg"  name="Ville" placeholder="Ville Name">
+
+                                      </div>
+                                 
+                                   </div>
+                                   <div>
+
+                                  <i class="fa fa-file">   </i>
+                                  <span style="color:#26B7D4; font-size: x-large;">Region</span>
+                                  </div>
+
+                                   <div class="card-body">
+
+                                      <div class="form-group">
+
+                                          <label for="Region" style=" color: #26B7D4;font-size: x-large;">Region Name </label>
+                                         
+                                          <input type="text" class="form-control form-control-lg" name="Region" placeholder="Region Name">
+
+                                      </div>
+                                 
+                                   </div>
+                                   <div class="card-body">
+
+                                     <input type="submit" value="Create" class="btn btn-outline-dark" />
+                                      <input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
+                                  </div>
+                             </form> 
+                          </div>
+                      </div>
+                    
+                     
+                      
+                      
                   </div>
 
               </div>

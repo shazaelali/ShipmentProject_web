@@ -1,0 +1,15 @@
+a{
+    color: #de9a59;
+    text-decoration: none;
+    background-color: transparent;
+  
+        font-size: 23px;
+        background-color: #80808021;
+        padding: 15px;
+        border-raduis: 20px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        margin: 9px;
+        /* text-align: center; */
+        color: black;
+}

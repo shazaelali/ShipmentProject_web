@@ -62,13 +62,13 @@
 
                                                     <?php
                                                     include 'connect.php';
-                                                    $q="SELECT `IdEntreprise`, `NameEntreprise`, `Description` FROM `entreprise`" ;
+                                                    $q="SELECT `IdEntreprise`, `NameEntreprise`, `DescriptionEntreprise` FROM `entreprise`" ;
                                                     $res=mysqli_query($connect,$q);
 
                                                     while($row=mysqli_fetch_assoc($res))
                                                     {
                                                     echo'
-                                                    <option values="'.$row['IdEntreprise'].'">'.$row['NameEntreprise'].'</option>';
+                                                    <option value="'.$row['IdEntreprise'].'">'.$row['NameEntreprise'].'</option>';
                                                     }
                                                     ?>
 
@@ -101,7 +101,7 @@
                                            while($row=mysqli_fetch_assoc($res))
                                            {
                                            echo'
-                                           <option values="'.$row['shipTypeID'].'">'.$row['TypeName'].'</option>';
+                                           <option value="'.$row['shipTypeID'].'">'.$row['TypeName'].'</option>';
                                            }
                                            ?>
 

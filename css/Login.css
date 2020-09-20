@@ -5,7 +5,6 @@
 }
 
 body{
-    overflow :hidden;
 	font-size: 20px;
 	overflow-x: hidden;
 	color: white;
@@ -19,8 +18,14 @@ header{
 	background-position: center;
 	height: 100vh;
 }
-.marginBottom{
-	margin-bottom: 20px;
+
+ul li a{
+	display: inline-block;
+	padding: 10px 30px;
+	font-weight: lighter;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 200px;
 }
 
 .row{
@@ -35,10 +40,9 @@ header{
 	margin-top: 20px;
 }
 
-
-
-
-
+h5{
+	color:#de9a59;
+}
 
 h2{
 	color: #fff;
@@ -59,26 +63,23 @@ h2{
 	border-radius: 200px;
 	transition: background-color 0.2s, border 0.2s, color 0.2;
 }
-.main-nav {
-display: inline-block;
-    padding: 10px 30px;
-    font-weight: lighter;
-    text-decoration: none;
-    text-transform: uppercase;
-	border-radius: 200px;
-	
+.BorderDiv{
+	border-radius: 20px 20px;
 }
-.main-nav a{
-	text-decoration: none;
-		color:#de9a59;
-	}
+.Marginbottom{
+	margin-bottom: 20px;
+}
+div a{
+  color:#de9a59;
+}
 
+.mobile-icon{display: none;}
 
 
 /*//////// Responsive queries //////////*/
 
 @media only screen and (max-width: 1180px){
-	
+
 
 	.row{
 		width:100%;
@@ -93,27 +94,10 @@ display: inline-block;
 @media only screen and (max-width: 768px){
 	h2{font-size: 180%;}	
 
-
-
-	.mobile-icon{ display: inline-block; 
-		color: #fff;
-		float: right;
-		margin-top: 30px;
-		margin-right: 20px;
-	}
-
-	.main-nav{float: left;}
-
-	.main-nav li{
-		display: block;
-		margin-top: 10px;
-	}
 }
 
 @media only screen and (max-width: 480px){
-	.btn-full{
-		margin-bottom: 20px;
-	}
+	
 
 	h2{font-size: 180%;}
 }

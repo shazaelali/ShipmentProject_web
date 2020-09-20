@@ -9,9 +9,9 @@
      header('location:typeShipmentd.php');
      }
      else{
-     mysqli_query($connect,"INSERT INTO `entreprise`(`IdEntreprise`, `NameEntreprise`, `Description`) VALUES (NULL,'$companyName','$companyDec')");
+     mysqli_query($connect,"INSERT INTO `entreprise`(`IdEntreprise`, `NameEntreprise`, `DescriptionEntreprise`) VALUES (NULL,'$companyName','$companyDec')");
     
-      header('location:typeShipment.php');
+      header('location:Controle.php');
      }
      mysqli_close($connect);
      

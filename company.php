@@ -48,7 +48,7 @@
                                  <div class="desginDiv">
                                    
                                      <div>
-                                         <i class="fa fa-building-o" aria-hidden="true"></i>
+                                         <i class="fa fa-building-o iconPage" aria-hidden="true"></i>
                                          <span > Company</span>
                                      </div>
                                      <table class="table table-striped">
@@ -63,12 +63,7 @@
                                                  <th scope="col">Decription contrat</th>
                                              </tr>
                                          </thead>
-                                         <tbody>
-
-                                             
-                                            
-
-                                         </tbody>
+                                         
                                      </table>
                                  </div>
 

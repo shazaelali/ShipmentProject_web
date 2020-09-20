@@ -12,6 +12,18 @@
          $result = mysqli_query($connect, $query);  
          $qu = "SELECT Address, count(*) as number FROM users GROUP BY Address";  
          $resulta = mysqli_query($connect, $qu);  
+        //user count
+         $Query="SELECT Account,count('Account')FROM `users` WHERE Account='Client' GROUP BY Account";
+         $Query_result = mysqli_query($connect, $Query);  
+        //admin count
+         $QueryAdmin="SELECT Account,count('Account')FROM `users` WHERE Account='Admin' GROUP BY Account";
+         $Query_resultAdmin = mysqli_query($connect, $QueryAdmin); 
+        // contract count 
+         $QueryContract="SELECT count('contract')FROM `contract`";
+         $Query_resultContract = mysqli_query($connect, $QueryContract); 
+        //shipment count
+         $QueryShipment="SELECT count('shippment')FROM `shippment`";
+         $Query_resultShipment = mysqli_query($connect, $QueryShipment); 
 ?>
   <!DOCTYPE html>
      <html lang="en">
@@ -21,6 +33,7 @@
              <link rel="stylesheet"  href="css/desginPages.css">
              
              <link rel="stylesheet"  href="css/leftMenu.css">
+             <link rel="stylesheet" href="css/admin.css">
 
               <title>Admin</title>
          </head>
@@ -33,22 +46,9 @@
         <div class="w-100">
               <?php include 'topMenu.php';?>
             <div id="content">
-                <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
+                <div class="container-fluid top" >
 
-                    <div class="row">
-
-                        <div class="col-12">
-                            <div class="row">
-                                
-                                <div class="col-6">
-
-                                    <div style="margin: 20px;">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                    
                     <div class="row">
                         <div class="col-lg-12 col-12">
 
@@ -59,13 +59,20 @@
                                 <div class="col-lg-12 col-12">
                                     <div class="row">
                                         <div class="col-md-6 mb-3 div">
-                                            <div class="card text-white border-light " style="margin-bottom:0;background-color: #8CBC59">
+                                            <div class="card text-white border-light" style="margin-bottom:0;background-color:#0a636e70">
                                                 <div class="card-body">
                                                     <div class="row no-gutters align-items-center">
                                                         <div class="col mr-2">
                                                             <div class="text-xl mb-1">Total users</div>
                                                             <div class="h3 mb-0 font-weight-bold text-gray-800">
-                                                                1
+                                                               <?php  
+                                                                  while($row = mysqli_fetch_array($Query_result))  
+                                                                   {  
+                                                                    echo $row["count('Account')"];  
+                                                                      }  
+                                                                    ?>  
+      
+                                                                  
 
                                                             </div>
                                                         </div>
@@ -80,13 +87,18 @@
                                         </div>
 
                                         <div class="col-md-6 mb-3 div">
-                                            <div class="card text-white border-light" style="margin-bottom:0;background-color: #FB5151">
+                                            <div class="card text-white border-light" style="margin-bottom:0;background-color:#956072d9">
                                                 <div class="card-body">
                                                     <div class="row no-gutters align-items-center">
                                                         <div class="col mr-2">
                                                             <div class="text-xs mb-1">Total admin</div>
                                                             <div class="h3 mb-0 font-weight-bold text-gray-800">
-                                                                1
+                                                            <?php  
+                                                                  while($row = mysqli_fetch_array($Query_resultAdmin))  
+                                                                   {  
+                                                                    echo $row["count('Account')"];  
+                                                                      }  
+                                                                    ?>
                                                             </div>
                                                         </div>
                                                         <div class="col-auto">
@@ -109,7 +121,12 @@
                                                             <div class="text-xs mb-1" style="color:#26B7D4">Total contart</div>
                                                             <div class="h3 mb-0 font-weight-bold text-gray-800" style="color:#707070">
 
-                                                                2
+                                                            <?php  
+                                                                  while($row = mysqli_fetch_array($Query_resultContract))  
+                                                                   {  
+                                                                    echo $row["count('contract')"];  
+                                                                      }  
+                                                                    ?>  
                                                             </div>
                                                         </div>
                                                         <div class="col-auto">
@@ -127,7 +144,12 @@
                                                         <div class="col mr-2">
                                                             <div class="text-xs mb-1" style="color:#26B7D4">Total shipment</div>
                                                             <div class="h3 mb-0 font-weight-bold text-gray-800" style="color:#707070">
-                                                                3
+                                                            <?php  
+                                                                  while($row = mysqli_fetch_array($Query_resultShipment))  
+                                                                   {  
+                                                                    echo $row["count('shippment')"];  
+                                                                      }  
+                                                                    ?>  
                                                             </div>
                                                         </div>
                                                         <div class="col-auto">
@@ -143,36 +165,7 @@
 
 
 
-                                    <div class="row">
-
-                                        <div class="col-sm-12 col-lg-12">
-                                             <div class="row">
-                                                 <div class="col-md-6 mb-3 div"> 
-                                                        <div class="formDiv">
-
-
-                                                           <div id="piechart" style="width: 400px; height: 350px;">
-                                                           </div> 
-                                                     </div>
-                                                  </div>
-                                                  <div class="col-md-6 mb-3 div"> 
-                                                        <div class="formDiv">
-
- 
-                                                            <div  class="heightDiv">
-
-                                                           
-                                                   
-
-                                                             </div>
-                                                        </div>
-                                                  </div>
-                                              
-                                              </div>
-                                              
-
-                                        </div>
-                                    </div>
+                                    
 
                                     <div class="row">
 
@@ -190,7 +183,27 @@
 
                                         </div>
                                     </div>
+                                     
+                                    <div class="row">
 
+                                        <div class="col-sm-12 col-lg-12">
+                                             <div class="row">
+                                                 <div class="col-md-8 mb-3 div"> 
+                                                        <div class="formDiv" 
+                                                        style="width: fit-content;margin-left: 15px;">
+
+
+                                                           <div id="piechart" style="" >
+                                                           </div> 
+                                                     </div>
+                                                  </div>
+                                                  
+                                              
+                                              </div>
+                                              
+
+                                        </div>
+                                    </div>
 
                                 </div>
                                  
@@ -228,11 +241,14 @@
                 ]);
 
            var options = {
-             legend: 'none',
+             
              pieSliceText: 'label',
              title: 'User Address',
              pieStartAngle: 100,
-              pieHole: 0.4 
+              pieHole: 0.4 ,
+              'width':550,
+               'height':400,
+              
             };
 
            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -257,11 +273,11 @@
             ]);
 
            var options = {
-              title: 'Chess opening moves',
+              title: 'Number Of Accounts',
               width: 900,
               legend: { position: 'none' },
-              chart: { title: 'Chess opening moves',
-              subtitle: 'popularity by percentage' },
+              chart: { title: 'umber Of Accounts',
+              subtitle: 'Number Of users by  Accounts' },
               bars: 'horizontal', // Required for Material Bar Charts.
               axes: {
                    x: {

@@ -61,7 +61,7 @@ header{
 }
 
 .main-nav li a:hover{
-	border-bottom: 2px solid #bf55ec;
+	border-bottom: 2px solid #de9a59;
 }
 
 
@@ -99,9 +99,9 @@ h2{
 
 .btn-full{
 	background-color: transparent;
-	color: #bf55ec;
+	color:#de9a59;
 	margin-right: 15px;
-	border: 1px solid #bf55ec;
+	border: 1px solid #de9a59;
 }
 
 .btn-full:hover{
@@ -115,7 +115,7 @@ h2{
 }
 
 .btn-nav:hover{
-	background-color: #bf55ec;
+	background-color: #de9a59;
 }
 
 
@@ -124,10 +124,10 @@ h2{
 }
 
 @keyframes colorchangethapa{
-	0%{color: red;}
-	25%{color:#bf55ec; ;}
+	0%{color: #de9a59;}
+	25%{color:#69421e; ;}
 	50%{ color: white; }
-	100%{ color:#bf55ec;  }
+	100%{ color:#de9a59;  }
 }
 
 .mobile-icon{display: none;}
