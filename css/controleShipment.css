@@ -1,0 +1,12 @@
+.top{
+    height:100%;
+    overflow:auto;
+    background-color:#F5F5F5;
+ 
+}
+.styleDiv{
+    background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;
+}
+.title{
+    color:#26B7D4; font-size: x-large;
+}

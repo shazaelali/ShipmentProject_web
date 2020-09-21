@@ -13,6 +13,8 @@
                 Shipment</a>
                 <a href="Controle.php" class="d-block text-light p-3"><i class="fa faIcon fa-file" style="color: #EEE"></i>
                 Type controle</a>
+                <a href="controleShipment.php" class="d-block text-light p-3"><i class="fa faIcon fa-file" style="color: #EEE"></i>
+                controle Shipment</a>
             </div>
       </div>
-    
+     

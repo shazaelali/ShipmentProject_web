@@ -156,41 +156,57 @@
                       </div>
 
                       <div class="col-lg-4 col-12">
-                          <div class="row " style="min-height:200px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-                              <div>
-                                  <i class="fa fa-file">   </i>
-                                  <span style="color:#26B7D4; font-size: x-large;">Status</span>
-                              </div>
-                              <div class="card-body">
-
-                                  <form name="StatusForm" action="status.php" method="post" >
-
-                                      <div class="form-group">
-
-
-                                          <label for="statusName" style=" color: #26B7D4;font-size: x-large;">Status Name </label>
-                                         
-                                          <input type="text" class="form-control form-control-lg" id="statusName" name="statusName" placeholder="Status Name">
-
-                                       
+                      <div class="row">
+                          <div class="col-sm-12 col-lg-12">
+                                  <div style="min-height:200px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
+                                      <div>
+                                          <i class="fa fa-file">   </i>
+                                          <span  class="title">Ville </span>
                                       </div>
-                                         
-                                      <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
+                                      <div class="card-body">
+                                      <div class="form-group">
+                                       <label  class="title" > Select Pays</label>
+
+                                                <select class="form-control form-control-lg" placeholder="Select Pays" name="sPay">
+
+                                                    <?php
+                                                    include 'connect.php';
+                                                    $q="SELECT `IdPay`, `NamePay` FROM `pay`";
+                                                    $res=mysqli_query($connect,$q);
+
+                                                    while($row=mysqli_fetch_assoc($res))
+                                                    {
+                                                    echo'
+                                                    <option value="'.$row['IdPay'].'">'.$row['NamePay'].'</option>';
+                                                    }
+                                                    ?>
+                                                     
+                                                </select>
+
+                                       </div>
+
+                                       <form name="Ville" action="Villes.php" method="post">
 
 
-                                  </form>
-                                 
-                                
-                                 
-                                  <form action="upload.php" method="POST" enctype="multipart/form-data">
-                                         <input type="file" name="file"/>
-	                                      <button type="submit" name="submit">
-	                                          UPLOAD IMG
-	                                          </button>
-                                   </form>
+                                          <div class="form-group">
+
+                                          <label for="Ville" class="title">Insert Ville </label>
+                                          <input type="text" class="form-control form-control-lg"  name="Ville" placeholder="Ville Name">
+                                         </div>
+
+                                          <input type="submit" value="Create" class="btn btn-outline-dark" />
+                                          <input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
+
+
+                                        </form>
+
+
+                                      </div>
+
+                                  </div>
+
 
                               </div>
-
                           </div>
                           <div class="row " style="min-height:200px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
                              <form name="location" action="location.php" method="post" >
