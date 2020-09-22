@@ -54,4 +54,10 @@
 }
 .formdiv{
     min-height:50px; ;border-radius: 5px;padding:5px;margin-bottom:20px;
+    text-align: center;
+}
+.formdiv :first-child{
+   
+    font-weight: bold;
+    text-align: center;
 }

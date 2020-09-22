@@ -18,12 +18,7 @@
  <head>
     <meta charset="UTF-8">
    
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- <link rel="stylesheet" type="text/css" href="css/signupStyle.css">-->
+    <?php include 'files.php';?> 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/client.css">
   
@@ -65,7 +60,7 @@
 
                             <div class="text colorBleu" > Shipment Summary</div>
                             <div > <img src="images/images (1).png"class="logoImages" /></div>
-                            <div  class="text"> id</div>
+                            <div  class="text" id="shippmentID"> </div>
                             <div>
                             
                                      
@@ -84,12 +79,19 @@
 
                              <div class="location"> 
 
-                                  <div><span class="SpanLocation">From beiurt  </span>
-                                      <span class="SpanLocation"style="float: right;">to tripoli </span>
+                                  <div>
+                                    <span class="SpanLocation">From 
+                                       <span class="SpanLocation" id="Form" ></span>
+                                      </span>
+
+                                      <span class="SpanLocation"style="float: right;">to  
+                                         <span class="SpanLocation"id="to" ></span>
+                                       </span>
                                     </div>
                 
-                                  <div> <span class="SpanLocationDate"> 20-5-2020</span>
-                                   <span class="SpanLocationDate" style="float: right;"> 25-5-2020</span></div>
+                                  <div> <span class="SpanLocationDate" id="date"> </span>
+                                     <span class="SpanLocationDate" id="DateShip" style="float: right;"> </span>
+                                   </div>
                              </div>
                         </div>
 
@@ -167,13 +169,14 @@
                         <div class="col-4 backDeatil marg">
                           <div class="formdiv">
                             <div>Shipment Type </div>
-                            <div>Overnight (Parcel)</div>
+                            <div id="typeShipment"></div>
                           </div> 
                          </div>
                          <div class="col-2 backDeatil marg"> 
                             <div class="formdiv">
                             <div>Weight </div>
-                            <div>0.24 KG</div>
+                            <div ><div id="weigth"></div>
+                            KG</div>
                           </div> 
                          </div>
                          <div class="col-2 backDeatil marg"> 
@@ -184,8 +187,8 @@
                          </div>
                          <div class="col-2 backDeatil marg"> 
                             <div class="formdiv">
-                            <div>No. Of Items </div>
-                            <div>1</div>
+                            <div >No. Of Items </div>
+                            <div id="items"></div>
                           </div> 
                          </div>
                          
@@ -193,12 +196,12 @@
                      
                        </div>
 
-                       <div class="col-4 backDeatil marg"> 
+                       <div class="col-7 backDeatil marg"> 
                             <div class="formdiv">
                               <div class="row">
                                 <div class="col-4">
                                   <div class="">Origin</div>
-                                  <div class="">Beirut</div>
+                                  <div class=""><span id="Origin"></span></div>
                                   
                                 </div>
                                 <div class="col-4">
@@ -207,7 +210,7 @@
                                 </div>
                                 <div class="col-4">
                                 <div class="">Destination</div>
-                                <div class="">Tripoli</div>
+                                <div class=""><span id="destintion"></span></div>
                                </div>
                               </div>
                           </div> 
@@ -255,8 +258,9 @@
   </div>
 		
             
-
-
+  <?php include 'scriptFiles.php';?>
+    <script src="js/jquery-3.5.1.min.js"></script> 
+  <script src="js/client.js"></script>
 
 </body>
 </html>
