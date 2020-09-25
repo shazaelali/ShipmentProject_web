@@ -1,0 +1,24 @@
+.image {
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+.postioncenter {
+    text-align: center;
+}
+.text {
+    font-size: larger;
+    font-weight: 700;
+}
+.colorBleu {
+    color: #26B7D4;
+}
+.linkDiv{
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    /* margin: 20px; */
+    overflow: auto;
+}
