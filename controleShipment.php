@@ -176,75 +176,7 @@
                               </div>
                           </div>
                            
-                          <div class="row">
-                             <div class="col-sm-12 col-lg-12">
-
-                             <form name="Details" action="Details.php" method="post">
-                                  <div class="styleDiv">
-                                      <div>
-                                          <i class="fa fa-file">   </i>
-                                          <span  class="title">Details </span>
-                                      </div>
-                                      <div class="card-body">
-                                         <div class="form-group">
-                                               <label  class="title"> Description update Details</label>
-
-                                                <select class="form-control form-control-lg" placeholder="Description update Details" name="DescriptionUpdate">
-
-                                                    <?php
-                                                    include 'connect.php';
-                                                    $q="SELECT `IdDescriptionUpdate`, `NameDescUpdate` FROM `descriptionupdate`";
-                                                    $res=mysqli_query($connect,$q);
-
-                                                    while($row=mysqli_fetch_assoc($res))
-                                                    {
-                                                    echo'
-                                                    <option value="'.$row['IdDescriptionUpdate'].'">'.$row['NameDescUpdate'].'</option>';
-                                                    }
-                                                    ?>
-                                                     
-                                                </select>
-
-                                           </div>
-
-                                           <div class="form-group">
-                                               <label  class="title"> Region</label>
-
-                                                <select class="form-control form-control-lg" placeholder="Region Details" name="RegionDetails">
-
-                                                    <?php
-                                                    include 'connect.php';
-                                                    $q="SELECT `IdRegion`, `regionName`, `IdVille` FROM `region`";
-                                                    $res=mysqli_query($connect,$q);
-
-                                                    while($row=mysqli_fetch_assoc($res))
-                                                    {
-                                                    echo'
-                                                    <option value="'.$row['IdRegion'].'">'.$row['regionName'].'</option>';
-                                                    }
-                                                    ?>
-                                                     
-                                                </select>
-
-                                           </div>
-                                           <label for="Ville" class="title">Name Detail </label>
-                                          <input type="text" class="form-control form-control-lg"  name="NameDetail" placeholder="Name Detail ">
-
-                                          <input type="submit" value="Create" class="btn btn-outline-dark" />
-                                          <input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
-
-
-                                        
-
-
-                                      </div>
-
-                                  </div>
-                                </form>
-
-
-                              </div>
-                          </div>
+                        
                           <div class="row">
                              <div class="col-sm-12 col-lg-12">
                                 <div class="styleDiv">

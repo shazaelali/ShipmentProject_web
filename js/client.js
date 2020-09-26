@@ -3,7 +3,7 @@
         
         $.ajax({
           
-        url:"showDataClientJSON.php",
+        url:"ShipmentDetails.php",
        
         success:function(data)
         { 

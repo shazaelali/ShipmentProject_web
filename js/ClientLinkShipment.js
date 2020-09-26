@@ -17,15 +17,15 @@ $(function(){
         
         
       //  <a href="productDetails.php?IdProducts=<?php echo($row['IdProducts'])?>">
-      $("table").append('<tbody>');
-      $("table").append('<tr>');
+    //   $("table").append('<tbody>');
+    //   $("table").append('<tr>');
      
-         $("table").append('<td><a href="ShipmentDetails.php?IdShipment="'+ myJISON[i].shippmentID +'>'+ myJISON[i].shippmentID +'</a> </td>');
+        
          
-         $("table").append('<td>'+ myJISON[i].From +" "+myJISON[i].To +'</td>');
-         $("table").append('<td>'+ myJISON[i].From + myJISON[i].NameShippment +'</td>');
+    //      $("table").append('<td>'+ myJISON[i].From +" "+myJISON[i].To +'</td>');
+    //      $("table").append('<td>'+ myJISON[i].From + myJISON[i].NameShippment +'</td>');
    
-         $("table").append('</tr>');
+    //      $("table").append('</tr>');
        
       }
     }

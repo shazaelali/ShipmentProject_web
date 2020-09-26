@@ -1,9 +1,12 @@
 
 
  <?php 
-      session_start();
+     session_start();
+    
+      include 'connect.php';
        if(isset($_SESSION["name"])){
             echo "bonjour". $_SESSION["name"];
+            $idUser=$_SESSION['id'];
         }else{
 
             header("Location:Login.html");
@@ -12,7 +15,17 @@
         // else echo"error";
         ?>
 
-
+<?php
+ 
+ 
+   $q="SELECT * FROM `shippment`,users WHERE users.IdUsers='$idUser'";
+   $res=mysqli_query($connect,$q);
+   
+   if(mysqli_num_rows($res)>0){
+        //exist   
+       while($row=mysqli_fetch_assoc($res)){?>
+         
+     
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -74,9 +87,23 @@
      
                              </tr>
                          </thead>
+                          <tbody>
                           
-                        
-                       
+    
+
+                         <tr>
+                            <th scope="row" id="link"> <a href="ShipmentDetails.php?IdShipment=<?php echo $row['IdUsers']; ?>">
+                            <?php echo $row['IdUsers']; ?>
+                            </a> 
+                           </th> 
+                             <td><?php echo $row['From']; ?> <?php echo $row['To']; ?></td>
+                             <td><?php echo $row['NameShippment']; ?></td>
+                           
+                             
+                        </tr>
+                    <?php  }
+                    }
+                    ?> 
                        
                         </table>
                       
