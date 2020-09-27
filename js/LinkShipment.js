@@ -5,7 +5,7 @@ $(function(){
         
     $.ajax({
       
-    url:"clientLinkInsertJSON.php",
+    url:"ShippmentJSON.php",
    
     success:function(data)
     { 

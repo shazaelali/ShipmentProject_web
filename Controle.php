@@ -164,38 +164,17 @@
                                           <span  class="title">Ville </span>
                                       </div>
                                       <div class="card-body">
-                                      <div class="form-group">
-                                       <label  class="title" > Select Pays</label>
+                                      
 
-                                                <select class="form-control form-control-lg" placeholder="Select Pays" name="sPay">
-
-                                                    <?php
-                                                    include 'connect.php';
-                                                    $q="SELECT `IdPay`, `NamePay` FROM `pay`";
-                                                    $res=mysqli_query($connect,$q);
-
-                                                    while($row=mysqli_fetch_assoc($res))
-                                                    {
-                                                    echo'
-                                                    <option value="'.$row['IdPay'].'">'.$row['NamePay'].'</option>';
-                                                    }
-                                                    ?>
-                                                     
-                                                </select>
-
-                                       </div>
-
-                                       <form name="Ville" action="Villes.php" method="post">
+                                      <form action="upload.php" method="POST" enctype="multipart/form-data">
+                                             <input type="file" name="file"/>
 
 
-                                          <div class="form-group">
+	                                       <button type="submit" name="submit"> UPLOAD IMG </button>
+	 
+	 
 
-                                          <label for="Ville" class="title">Insert Ville </label>
-                                          <input type="text" class="form-control form-control-lg"  name="Ville" placeholder="Ville Name">
-                                         </div>
-
-                                          <input type="submit" value="Create" class="btn btn-outline-dark" />
-                                          <input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
+                                          
 
 
                                         </form>
@@ -208,66 +187,7 @@
 
                               </div>
                           </div>
-                          <div class="row " style="min-height:200px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-                             <form name="location" action="location.php" method="post" >
- 
-                                  <div>
-                                  <i class="fa fa-file">   </i>
-                                  <span style="color:#26B7D4; font-size: x-large;">Pays</span>
-                                  </div>
-
-                                   <div class="card-body">
-
-                                      <div class="form-group">
-
-                                          <label for="Pays" style=" color: #26B7D4;font-size: x-large;">Pays </label>
-                                         
-                                          <input type="text" class="form-control form-control-lg"  name="Pays" placeholder="Pays Name">
-
-                                      </div>
-                                 
-                                   </div>
-                                   <div>
-
-                                  <i class="fa fa-file">   </i>
-                                  <span style="color:#26B7D4; font-size: x-large;">Ville</span>
-                                  </div>
-
-                                   <div class="card-body">
-
-                                      <div class="form-group">
-
-                                          <label for="Ville" style=" color: #26B7D4;font-size: x-large;">Ville </label>
-                                         
-                                          <input type="text" class="form-control form-control-lg"  name="Ville" placeholder="Ville Name">
-
-                                      </div>
-                                 
-                                   </div>
-                                   <div>
-
-                                  <i class="fa fa-file">   </i>
-                                  <span style="color:#26B7D4; font-size: x-large;">Region</span>
-                                  </div>
-
-                                   <div class="card-body">
-
-                                      <div class="form-group">
-
-                                          <label for="Region" style=" color: #26B7D4;font-size: x-large;">Region Name </label>
-                                         
-                                          <input type="text" class="form-control form-control-lg" name="Region" placeholder="Region Name">
-
-                                      </div>
-                                 
-                                   </div>
-                                   <div class="card-body">
-
-                                     <input type="submit" value="Create" class="btn btn-outline-dark" />
-                                      <input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
-                                  </div>
-                             </form> 
-                          </div>
+                          
                       </div>
                     
                      
@@ -282,3 +202,4 @@
           <?php include 'scriptFiles.php';?>  
       </body>
    </html>
+ 

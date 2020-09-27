@@ -1,6 +1,6 @@
 <?php
     var_dump($_FILES);
-  
+ 
 	 
 	 if(!empty($_FILES))
 	  {  $fileName=$_FILES['file']['name'];
@@ -16,11 +16,11 @@
 			{  
 				if(move_uploaded_file($fileTmpName,$file_dest)){
 					echo'fichier envoyer avec sucee';
-					 $connect=mysqli_connect("localhost","root","","web3db");
+					include 'connect.php';
 					 $image =$fileName;
-                     $sql="INSERT INTO `status`(`ImageStatus`) VALUES ('$image')";
-                     
+					 $sql="INSERT INTO `files`(`Id`, `Name`)  VALUES (NULL,'$image')";
 					 mysqli_query($connect,$sql);
+					 header('location:Controle.php');
 				} else{
 					echo"Error";
 				}

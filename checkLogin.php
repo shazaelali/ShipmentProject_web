@@ -14,29 +14,39 @@ if(mysqli_num_rows($res)==1){//>0 plusieur email meme password /==1 email avec p
     $row=mysqli_fetch_assoc($res);
     if(password_verify($pass,$row['Password']))
     {
-        if($pass=="admin123"){
-         // session_start();
-            $_SESSION['id']=$row["IdUsers"];
-            $_SESSION['name']=$row["FirstName"]." ".$row["LastName"];
-            $_SESSION['location']=$row["Address"];
-            $_SESSION['Email']=$row["Email"];
-            $_SESSION['Gender']=$row["Gender"];
-            $_SESSION['Profile']=$row["imgUser"];
+      if($pass=="admin123"){
+        // session_start();
+           $_SESSION['id']=$row["IdUsers"];
+           $_SESSION['name']=$row["FirstName"]." ".$row["LastName"];
+           $_SESSION['location']=$row["Address"];
+           $_SESSION['Email']=$row["Email"];
+           $_SESSION['Gender']=$row["Gender"];
+           $_SESSION['Profile']=$row["imgUser"];
 
-            header('location:admin.php');
-          }
-         else{
-          //session_start();
-    
-          $_SESSION['id']=$row["IdUsers"];
-          $_SESSION['name']=$row["FirstName"]." ".$row["LastName"];
-          $_SESSION['location']=$row["Address"];
-          $_SESSION['Email']=$row["Email"];
-          
-       
+           header('location:admin.php');
+         }else{
+           if($pass=="chauffeur123"){
+           // session_start();
+              $_SESSION['chauffeur']=$row["IdUsers"];
+              $_SESSION['name']=$row["FirstName"]." ".$row["LastName"];
+              $_SESSION['location']=$row["Address"];
+              $_SESSION['Email']=$row["Email"];
+              $_SESSION['Gender']=$row["Gender"];
+              $_SESSION['Profile']=$row["imgUser"];
+  
+              header('location:chauffeur.php');
+            }else{
+              
+         $_SESSION['id']=$row["IdUsers"];
+         $_SESSION['name']=$row["FirstName"]." ".$row["LastName"];
+         $_SESSION['location']=$row["Address"];
+         $_SESSION['Email']=$row["Email"];
          
-           header('location:loggedIn.php');
-           }  
+      
+        
+          header('location:loggedIn.php');
+            }
+         }
     }else{
         //not existe
          header('location:Login.html');
@@ -49,3 +59,4 @@ if(mysqli_num_rows($res)==1){//>0 plusieur email meme password /==1 email avec p
 mysqli_free_result($res);  //trye7 system men millons recreds dans le memoire 
 mysqli_close($connect);
 ?>
+

@@ -1,9 +1,9 @@
 <?php
  session_start();
-  $idUser=$_SESSION['id'];
+ 
    include 'connect.php';
  
-   $q="SELECT * FROM `shippment`,users WHERE users.IdUsers='$idUser'";
+   $q="SELECT * FROM `shippment`,users WHERE users.IdUsers=shippment.IdUsers";
    $res=mysqli_query($connect,$q);
    
    if(mysqli_num_rows($res)>0){

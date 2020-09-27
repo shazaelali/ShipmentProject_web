@@ -185,10 +185,7 @@
                                           <span  class="title">Shipment </span>
                                       </div>
                                    <form name="shippmentForm" action="insertShipment.php" method="post">
-                                   <div class="form-group">
-                                                    <label for="To" class="title">Name Shipment</label>
-                                                    <input type="text" class="form-control form-control-lg"  name="NameShipment" placeholder="Name Shipment">
-                                                </div>
+                                 
                                             <label  class="title">Name client</label>
                                                 <select class="form-control form-control-lg" placeholder="Name client" name="NameClient" id="NameClient">
                                               
@@ -307,121 +304,13 @@
                                                     ?>
 
                                                 </select>
-
-
-                                                <label class="title">Status</label>
-                                                <select class="form-control form-control-lg" placeholder="Status" name="status">
-
-                                                    <?php
-                                                    include 'connect.php';
-                                                    $q="  SELECT `StatusID`, `statusName` FROM `status`" ;
-                                                    $res=mysqli_query($connect,$q);
-
-                                                    while($row=mysqli_fetch_assoc($res))
-                                                    {
-                                                    echo'
-                                                    <option value="'.$row['StatusID'].'">'.$row['statusName'].'</option>';
-                                                    }
-                                                    ?>
-
-                                                </select>
-
-                                                <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
+                                           <input type="submit" value="Create" class="btn btn-outline-dark" /><input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
                                             </form>
                                       </div>
  
                                </div>   
                           </div>
-                          <div class="row">
-                             <div class="col-sm-12 col-lg-12">
-
-                             <form name="Details" action="Details.php" method="post">
-                                  <div class="styleDiv">
-                                      <div>
-                                          <i class="fa fa-file">   </i>
-                                          <span  class="title">Details </span>
-                                      </div>
-                                      <div class="card-body">
-
-                                      <div class="form-group">
-                                               <label  class="title">Shipment Name</label>
-
-                                                <select class="form-control form-control-lg" placeholder="Shipment Name" name="ShipmentName">
-
-                                                    <?php
-                                                    include 'connect.php';
-                                                    $q="SELECT * FROM `shippment`";
-                                                    $res=mysqli_query($connect,$q);
-
-                                                    while($row=mysqli_fetch_assoc($res))
-                                                    {
-                                                    echo'
-                                                    <option value="'.$row['shippmentID'].'">'.$row['NameShippment'].'</option>';
-                                                    }
-                                                    ?>
-                                                     
-                                                </select>
-
-                                           </div>
-                                         <div class="form-group">
-                                               <label  class="title"> Description update Details</label>
-
-                                                <select class="form-control form-control-lg" placeholder="Description update Details" name="DescriptionUpdate">
-
-                                                    <?php
-                                                    include 'connect.php';
-                                                    $q="SELECT `IdDescriptionUpdate`, `NameDescUpdate` FROM `descriptionupdate`";
-                                                    $res=mysqli_query($connect,$q);
-
-                                                    while($row=mysqli_fetch_assoc($res))
-                                                    {
-                                                    echo'
-                                                    <option value="'.$row['IdDescriptionUpdate'].'">'.$row['NameDescUpdate'].'</option>';
-                                                    }
-                                                    ?>
-                                                     
-                                                </select>
-
-                                           </div>
-
-                                           <div class="form-group">
-                                               <label  class="title"> Region</label>
-
-                                                <select class="form-control form-control-lg" placeholder="Region Details" name="RegionDetails">
-
-                                                    <?php
-                                                    include 'connect.php';
-                                                    $q="SELECT `IdRegion`, `regionName`, `IdVille` FROM `region`";
-                                                    $res=mysqli_query($connect,$q);
-
-                                                    while($row=mysqli_fetch_assoc($res))
-                                                    {
-                                                    echo'
-                                                    <option value="'.$row['IdRegion'].'">'.$row['regionName'].'</option>';
-                                                    }
-                                                    ?>
-                                                     
-                                                </select>
-
-                                           </div>
-                                           <label for="Ville" class="title">Name Detail </label>
-                                          <input type="text" class="form-control form-control-lg"  name="NameDetail" placeholder="Name Detail ">
-
-                                          <input type="submit" value="Create" class="btn btn-outline-dark" />
-                                          <input type="reset" class="btn btn-outline-dark" style="margin: 20px;" />
-
-
-                                        
-
-
-                                      </div>
-
-                                  </div>
-                                </form>
-
-
-                              </div>
-                          </div>
+                        
                       </div>
 
                       <div class="col-lg-6 col-12">
