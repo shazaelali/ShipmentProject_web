@@ -3,7 +3,7 @@
  
    include 'connect.php';
  
-   $q="SELECT * FROM `shippment`,users WHERE users.IdUsers=shippment.IdUsers";
+   $q="SELECT * FROM `deleteshipment`,users WHERE users.IdUsers=deleteshipment.IdUsers";
    $res=mysqli_query($connect,$q);
    
    if(mysqli_num_rows($res)>0){

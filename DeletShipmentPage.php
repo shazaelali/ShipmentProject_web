@@ -1,17 +1,13 @@
 <?php
  session_start();
  
-   include 'connect.php';
+   
  
-   $q="SELECT * FROM `shippment`,users WHERE users.IdUsers=shippment.IdUsers";
-   $res=mysqli_query($connect,$q);
+  
    
   ?>
   
- <?php
-       include 'connect.php';
-         
-?>
+ 
   <!DOCTYPE html>
      <html lang="en">
          <head>
@@ -22,7 +18,7 @@
              <link rel="stylesheet"  href="css/leftMenu.css">
              <link rel="stylesheet" href="css/admin.css">
 
-              <title>Chauffeur</title>
+              <title>Deleted Shipment</title>
          </head>
          <body>
 
@@ -62,37 +58,22 @@
                                             <div class="card  border-light" style="margin-bottom:0;">
                                                 <div class="card-body">
                                                 <table class="table">
-                                                  <thead>
+                                                  
                                                      <tr>
                                                        <th scope="col">ID Shipment</th>
                                                        <th scope="col"> Name</th> 
+                                                       <th scope="col">Origine</th>
                                                        <th scope="col">Destination</th>
                                                        <th scope="col">DateEstime</th>
-                                                       <th scope="col"></th>
-                                                       <th scope="col"></th>
-                                                       <th scope="col"></th>
-                                                    </tr>
-                                                 </thead>
-                                                 <tbody>
-                                                 <?php  
-                                                  if(mysqli_num_rows($res)>0){
-                                                    //exist   
-                                                 
-                                                   while($row=mysqli_fetch_assoc($res)){?>
-                                                     <tr>
-                                                     <th scope="row"> <?php echo $row['shippmentID'];?></th>
-                                                        <td><?php echo $row['FirstName'];?> <?php echo $row['LastName'];?></td>
-                                                       <td><?php  echo $row['To'];?></td>
-                                                       <td><?php  echo $row['DateTOShip'];?></td>
-                                                       <td><a href="UpdateDetails.php?IDShipment=<?php echo $row['shippmentID'];?>">UpdateDetails</a></td>
-                                                       <td><a href="UpdateDetails.php?IDShipment=<?php echo $row['shippmentID'];?>">Update Stauts</a></td>
-                                                       <td><a href="DeletShipment.php?IDShipment=<?php echo $row['shippmentID'];?>">DeleteShipment</a></td>
-                                             </tr>
-                                           <?php }
-                                             }
-                                             ?>
                                                    
-                                                  </tbody>
+                                                    </tr>
+                                                
+                                                
+                                                
+                                                   
+                                          
+                                                   
+                                                  
                                               </table>
                                           
                                                 </div>
@@ -129,7 +110,7 @@
      
      <?php include 'scriptFiles.php';?> 
      <script src="js/jquery-3.5.1.min.js"></script>  
-    
+      <script src="js/LinkShipment.js"></script>
 
 
     </body>
