@@ -18,12 +18,9 @@
 <?php
  
  
-   $q="SELECT * FROM `shippment`,users WHERE users.IdUsers='$idUser'";
+   $q="SELECT * FROM `shippment`,users WHERE users.IdUsers='$idUser'AND shippment.IdUsers=users.IdUsers";
    $res=mysqli_query($connect,$q);
-   
-   if(mysqli_num_rows($res)>0){
-        //exist   
-       while($row=mysqli_fetch_assoc($res)){?>
+   ?>
          
      
 <!DOCTYPE html>
@@ -89,15 +86,18 @@
                          </thead>
                           <tbody>
                           
-    
+                       
+  <?php if(mysqli_num_rows($res)>0){
+        //exist   
+       while($row=mysqli_fetch_assoc($res)){?>
 
                          <tr>
-                            <th scope="row" id="link"> <a href="ShipmentDetails.php?IdShipment=<?php echo $row['IdUsers']; ?>">
-                            <?php echo $row['IdUsers']; ?>
+                            <th scope="row" id="link"> <a href="ShipmentDetails.php?IdShipment=<?php echo $row['shippmentID']; ?>">
+                            <?php echo $row['shippmentID']; ?>
                             </a> 
                            </th> 
                              <td><?php echo $row['From']; ?> <?php echo $row['To']; ?></td>
-                             <td><?php echo $row['NameShippment']; ?></td>
+                             <td></td>
                            
                              
                         </tr>

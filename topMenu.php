@@ -2,7 +2,7 @@
                 <div class="container-fluid">
                     <h3>
                         Welcome
-                        <?php if(isset($_SESSION["name"])){echo  $_SESSION["name"];}else  header("Location:Login.html");?>
+                        <?php if(isset($_SESSION["name"])){echo  $_SESSION["name"];}else {header("Location:Login.html");}?>
                     </h3>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
                                     echo  $_SESSION["name"];
                                     }
 
-                                    else echo"error";
+                                    else{ header("Location:Login.html");} 
                                     ?>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">

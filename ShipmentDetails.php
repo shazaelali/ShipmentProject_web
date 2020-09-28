@@ -16,16 +16,14 @@
    
    $IDShipment=$_GET["IdShipment"];
     
-   $q="SELECT * FROM `users`,shippment,shippmenttype,status WHERE users.IdUsers='$idUser' AND shippment.shippmentID='$IDShipment'
-    AND shippmenttype.shipTypeID=shippment.shippmentID AND shippment.shippmentID=status.shippmentID";
+   $q="SELECT * FROM `users`,shippment,shippmenttype,status,files WHERE users.IdUsers='$idUser' AND shippment.shippmentID='$IDShipment' AND shippmenttype.shipTypeID=shippment.shipTypeID AND shippment.shippmentID=status.shippmentID AND Status.Id=files.Id ORDER BY `status`.`Id` ASC";
 
   $q2="SELECT * FROM `users`,shippment,shippmenttype WHERE users.IdUsers='$idUser' AND shippment.shippmentID='$IDShipment' 
   AND shippmenttype.shipTypeID=shippment.shippmentID";
 
-$query="SELECT * FROM `users`,shippment,shippmenttype,detail,descriptionupdate,region,ville,pay 
-WHERE users.IdUsers='$idUser' AND shippment.shippmentID='$IDShipment' AND shippmenttype.shipTypeID=shippment.shippmentID AND detail.shippmentID=shippment.shippmentID AND detail.IdDescriptionUpdate=descriptionupdate.IdDescriptionUpdate AND detail.IdRegion=region.IdRegion AND region.IdVille=ville.IdVille AND ville.IdPay=pay.IdPay";
+$query="SELECT * FROM `users`,shippment,shippmenttype,detail,descriptionupdate,region,ville,pay WHERE users.IdUsers='$idUser' AND shippment.shippmentID='$IDShipment' AND shippmenttype.shipTypeID=shippment.shipTypeID AND detail.shippmentID=shippment.shippmentID AND detail.IdDescriptionUpdate=descriptionupdate.IdDescriptionUpdate AND detail.IdRegion=region.IdRegion AND region.IdVille=ville.IdVille AND ville.IdPay=pay.IdPay ORDER BY `descriptionupdate`.`IdDescriptionUpdate` ASC";
    $res=mysqli_query($connect,$q);
-   $result=mysqli_query($connect,$q2);
+   $result=mysqli_query($connect,$q);
    $resultat=mysqli_query($connect,$query);
    ?>
 
@@ -92,7 +90,7 @@ WHERE users.IdUsers='$idUser' AND shippment.shippmentID='$IDShipment' AND shippm
                                   while($row=mysqli_fetch_assoc($res)){
        
                                          ?>
-                                      <td>  <img src="images/<?php echo  $row['ImageStatus'];?>"class="satutsImages" /><div><?php echo  $row['statusName'];?></div> </td>
+                                      <td>  <img src="images/<?php echo  $row['Name'];?>"class="satutsImages" /><div><?php echo  $row['statusName'];?></div> </td>
                                       <?php }
     }
    

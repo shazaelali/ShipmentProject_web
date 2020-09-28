@@ -28,7 +28,7 @@ if(mysqli_num_rows($res)==1){//>0 plusieur email meme password /==1 email avec p
            if($pass=="chauffeur123"){
            // session_start();
               $_SESSION['chauffeur']=$row["IdUsers"];
-              $_SESSION['name']=$row["FirstName"]." ".$row["LastName"];
+              $_SESSION['namechauffeur']=$row["FirstName"]." ".$row["LastName"];
               $_SESSION['location']=$row["Address"];
               $_SESSION['Email']=$row["Email"];
               $_SESSION['Gender']=$row["Gender"];

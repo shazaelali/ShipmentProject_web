@@ -1,6 +1,7 @@
 <?php 
      session_start();
-     $ShipId= $_GET['IDShipment'];
+     if(isset( $_GET['IDShipment'])) {$ShipId= $_GET['IDShipment'];}else{ }
+    
  ?>
   <!DOCTYPE html>
      <html lang="en">
@@ -23,7 +24,7 @@
 
           <div class="w-100">
 
-          <?php include 'topMenu.php';?>
+          
 
           <div id="content">
               <div class="container-fluid top" >
@@ -156,7 +157,7 @@
                                                <label  class="title"> Status Name</label>
 
                                                 <select class="form-control form-control-lg" placeholder="Status Name" name="StatusName">
-                                                   <option value="Processing">Processing</option>
+                                                  
                                                    <option value="In Transit">In Transit</option>
                                                    <option value="Delivered">Delivered</option>
                                                 </select>

@@ -22,7 +22,7 @@
      mysqli_query($connect,"INSERT INTO `shippment`(`shippmentID`,`pays`,`From`, `To`, `Date`, `DateTOShip`, `Weight`, `NoOfItems`, `Description`, `IdUsers`,  `shipTypeID`) VALUES (NULL,'$pays','$from','$to','$dateship','$DateEstimate','$weightship','$numOfItems','$descriptionShip','$client','$typeship')");
      echo "INSERT INTO `shippment`(`shippmentID`,`pays`,`From`, `To`, `Date`, `DateTOShip`, `Weight`, `NoOfItems`, `Description`, `IdUsers`,  `shipTypeID`) VALUES (NULL,'$pays','$from','$to','$dateship','$DateEstimate','$weightship','$numOfItems','$descriptionShip','$client','$typeship')";
           
-    //  header('location:controleShipment.php');
+     header('location:shipment.php');
      }
      mysqli_close($connect);
      
