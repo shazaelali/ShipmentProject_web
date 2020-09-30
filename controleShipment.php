@@ -55,6 +55,12 @@
                                           <span class="title">Pays</span>
                                       </div>
                                       <div class="card-body">
+                                      <?php if(isset($_GET['MessagePay']))
+                                     echo '<div  class="formDesgin divalert_Sucess"> New pay Insert </div>';
+                                      ?>
+                                       <?php if(isset($_GET['messageError']))
+                                     echo '<div  class="formDesgin divalert"> fileds empty! </div>';
+                                      ?>
                                           <form name="Pays" action="Pays.php" method="post">
 
 
@@ -90,6 +96,12 @@
                                           <span  class="title">Ville </span>
                                       </div>
                                       <div class="card-body">
+                                      <?php if(isset($_GET['messageVille']))
+                                     echo '<div  class="formDesgin divalert_Sucess"> New Ville Insert </div>';
+                                      ?>
+                                       <?php if(isset($_GET['messageVilleError']))
+                                     echo '<div  class="formDesgin divalert"> fileds empty! </div>';
+                                      ?>
                                          <div class="form-group">
                                                <label  class="title" > Select Pays</label>
 
@@ -144,6 +156,12 @@
                                           <span  class="title">Region </span>
                                       </div>
                                       <div class="card-body">
+                                      <?php if(isset($_GET['messegeRegion']))
+                                     echo '<div  class="formDesgin divalert_Sucess"> New Region Insert </div>';
+                                      ?>
+                                       <?php if(isset($_GET['messegeRegionError']))
+                                     echo '<div  class="formDesgin divalert"> fileds empty! </div>';
+                                      ?>
                                          <div class="form-group">
                                                <label  class="title" > Select ville</label>
 
@@ -206,6 +224,12 @@
                                           <span class="title">Type Shippement</span>
                                       </div>
                                       <div class="card-body">
+                                      <?php if(isset($_GET['MessageType']))
+                                     echo '<div  class="formDesgin divalert_Sucess"> New type Insert </div>';
+                                      ?>
+                                       <?php if(isset($_GET['MessageTypeError']))
+                                     echo '<div  class="formDesgin divalert"> fileds empty! </div>';
+                                      ?>
                                           <form name="typeshippmentForm" action="typeshippmentV.php" method="post">
 
 
@@ -243,6 +267,12 @@
                                           <span style="color:#26B7D4; font-size: x-large;">Company </span>
                                       </div>
                                       <div class="card-body">
+                                      <?php if(isset($_GET['MessageComapny']))
+                                     echo '<div  class="formDesgin divalert_Sucess"> New Company Insert </div>';
+                                      ?>
+                                       <?php if(isset($_GET['MessageComapnyError']))
+                                     echo '<div  class="formDesgin divalert"> fileds empty! </div>';
+                                      ?>
                                           <form name="CompanyForm" action="CompanyInsert.php" method="post">
 
 
@@ -278,7 +308,12 @@
                                   <span style="color:#26B7D4; font-size: x-large;"> Description update Details</span>
                               </div>
                               <div class="card-body">
-
+                              <?php if(isset($_GET['MessageDecreption']))
+                                     echo '<div  class="formDesgin divalert_Sucess"> New Details Insert </div>';
+                                      ?>
+                                       <?php if(isset($_GET['MessageDecreptionerror']))
+                                     echo '<div  class="formDesgin divalert"> fileds empty! </div>';
+                                      ?>
                                   <form name="DescriptionDetails" action="DescriptionDetails.php" method="post">
 
                                       <div class="form-group">

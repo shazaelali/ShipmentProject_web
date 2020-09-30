@@ -20,14 +20,15 @@
 					 $image =$fileName;
 					 $sql="INSERT INTO `files`(`Id`, `Name`)  VALUES (NULL,'$image')";
 					 mysqli_query($connect,$sql);
-					 header('location:Controle.php');
+					 header('location:ControleStatus.php?Messageuplode=sucess');
 				} else{
-					echo"Error";
+					header('location:ControleStatus.php?MessageuplodeError=error');
 				}
 				
 			} else
 			{
-				echo" Just les jpg et png files ";
+				header('location:ControleStatus.php?MessageuplodeError2=Just les jpg et png files');
+				
 			}
 	  }
 	  

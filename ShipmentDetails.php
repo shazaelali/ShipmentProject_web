@@ -12,7 +12,7 @@
           
         }else{
 
-            header("Location:Login.html");
+            header("Location:Login.php");
         }
         
         // else echo"error";
@@ -61,7 +61,7 @@ $query="SELECT * FROM `users`,shippment,shippmenttype,detail,descriptionupdate,r
                 <div class="col-12">
                     <div style="margin: 20px;">
                     <span style="color: #26B7D4;font-size: 32px;">List Shipment of <?php if(isset($_SESSION["name"])) echo $_SESSION["name"];?></span>
-                    <a class="" href="#" id="button"style="padding: 0px; color: #212529; font-size: 32px;    float: right;" > LogOut </a>
+                    <a class="" href="Login.php" id="button"style="padding: 0px; color: #212529; font-size: 32px;    float: right;" > LogOut </a>
                     
                
                     </div>

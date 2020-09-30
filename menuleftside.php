@@ -19,7 +19,7 @@
                 controle Shipment</a>
                 <a href="history.php" class="d-block text-light p-3 fontSize"><i class="fa fa-history" aria-hidden="true"style="color: #EEE"></i>
                 History</a>
-                <a href="shipment.php" class="d-block text-light p-3 fontSize"><i class="fa faIcon fa-truck" aria-hidden="true" style="color: #EEE"></i>
+                <a href="ChauffeurAdminPage.php" class="d-block text-light p-3 fontSize"><i class="fa faIcon fa-truck" aria-hidden="true" style="color: #EEE"></i>
                 Chauffeur</a>
             </div>
          </ul>

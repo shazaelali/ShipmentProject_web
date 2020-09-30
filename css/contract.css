@@ -10,3 +10,25 @@
 .marginBottom{
     margin-top: 15px;
 }
+.divalert{
+    margin-bottom: 20px;
+    height: 32px;
+    background-color: #ff0000ab;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+	font-size: 30px;
+	height: 64px;
+}
+.divalert_Sucess{
+    margin-bottom: 20px;
+    height: 32px;
+    background-color: #4caf50a3;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+	font-size: 30px;
+	height: 64px;
+}

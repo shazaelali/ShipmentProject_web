@@ -39,17 +39,4 @@
                     </div>
                 </div>
             </nav>
-            <div class="bg_model">
-            <div class="model_content">
-           <div class="close">
-                   +
-             </div>
-
-                  <div class="LogOutDesgin">
-					   Log out of Stema ?
-					   <div  style="text-align: center;margin: 10px;">
-                         <a href="LogOut.php" class="LogOut"> log out</a>
-					   </div>                  
-                </div>
-                </div>
-			   </div> 
+         

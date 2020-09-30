@@ -54,6 +54,12 @@
                                       <i class="fa fa-newspaper-o bleu" aria-hidden="true"></i>
                                           <span  class="title">Shipment </span>
                                       </div>
+                                      <?php if(isset($_GET['Message']))
+                                     echo '<div  class="formDesgin divalert_Sucess"> New shipment Insert </div>';
+                                      ?>
+                                       <?php if(isset($_GET['MessageError']))
+                                     echo '<div  class="formDesgin divalert"> fileds empty! </div>';
+                                      ?>
                                    <form name="shippmentForm" action="insertShipment.php" method="post">
                                  
                                             <label  class="title">Name client</label>
@@ -119,13 +125,13 @@
 
                                                     <?php
                                                     include 'connect.php';
-                                                    $q="SELECT `IdVille`, `NameVille`, `IdPay` FROM `ville`";
+                                                    $q="SELECT `IdRegion`, `regionName`, `IdVille` FROM `region`";
                                                     $res=mysqli_query($connect,$q);
 
                                                     while($row=mysqli_fetch_assoc($res))
                                                     {
                                                     echo'
-                                                    <option value="'.$row['NameVille'].'">'.$row['NameVille'].'</option>';
+                                                    <option value="'.$row['regionName'].'">'.$row['regionName'].'</option>';
                                                     }
                                                     ?>
                                                      

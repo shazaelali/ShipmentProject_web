@@ -13,15 +13,14 @@ $ShipmentType=$_POST["StShip"];
 
 if(empty($IdCompany)||empty($contractDesc)||empty($Datec)||empty($DateE)||empty($ShipmentType)){
   
-          header('location:shipment.php');//error
+  header('location:Contrat.php?MessageError=Not Insert');//error
           
 }
 else{
   
   mysqli_query($connect,"INSERT INTO `contract`(`IdContract`, `dateContarct`, `dateExpire`, `descriptionContract`, `shipTypeID`, `IdEntreprise`) VALUES (NULL,'$Datec','$DateE','$contractDesc','$ShipmentType','$IdCompany')");
-   $i++;
-   echo '<script>alert('.$i.')</script>';
-   header('location:Contrat.php');
+  
+   header('location:Contrat.php?Message=Insert company');
    
 }
 mysqli_close($connect);

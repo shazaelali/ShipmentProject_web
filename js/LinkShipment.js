@@ -17,7 +17,7 @@ $(function(){
         
         
       
-     
+         $("table").append('<tbody>');
       $("table").append('<tr>');
      
    
@@ -28,7 +28,7 @@ $(function(){
          $("table").append('<td>'+  myJISON[i].DateTOShip +'</td>');
          $("table").append('</tr>');
 
-        
+         $("table").append('</tbody>');
        
       }
     }

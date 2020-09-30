@@ -10,12 +10,12 @@
     
     //name="shipmentTypeName" shipTime
      if(empty($Ville)||empty($IdPay)){
-       
+      header('location:controleShipment.php?messageVilleError=Not Insert');
      }
      else{
 		mysqli_query($connect,"INSERT INTO `ville`(`IdVille`, `NameVille`, `IdPay`) VALUES (NULL,'$Ville','$IdPay')");
         
-      header('location:controleShipment.php');
+      header('location:controleShipment.php?messageVille=InsertVille');
      }
      mysqli_close($connect);
      

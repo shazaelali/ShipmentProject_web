@@ -54,7 +54,12 @@
                                    <span style="color:#26B7D4; font-size: x-large;">Contart</span>
                                </div>
                                <div class="card-body">
-
+                               <?php if(isset($_GET['Message']))
+                                     echo '<div  class="formDesgin divalert_Sucess"> New Contarct Insert </div>';
+                                      ?>
+                                       <?php if(isset($_GET['MessageError']))
+                                     echo '<div  class="formDesgin divalert"> fileds empty! </div>';
+                                      ?>
                                    <form name="typeshippmentForm" action="insertContrat.php" method="post">
 
                                        <div class="form-group">

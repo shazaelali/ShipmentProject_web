@@ -6,12 +6,12 @@
     
     //name="shipmentTypeName" shipTime
      if(empty($DescriptionDetails)){
-     header('location:typeShipmentd.php');//error
+        header('location:controleShipment.php?MessageDecreptionerror=Inert not done');
      }
      else{
      mysqli_query($connect,"INSERT INTO `descriptionupdate`(`IdDescriptionUpdate`, `NameDescUpdate`) VALUES (NULL,'$DescriptionDetails')");
      
-      header('location:Controle.php');
+      header('location:controleShipment.php?MessageDecreption=Inert done');
      }
      mysqli_close($connect);
      

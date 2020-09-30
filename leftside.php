@@ -7,8 +7,7 @@
               Chauffeur</a>
                 <a href="DeletShipmentPage.php " class="d-block  text-light p-3"><i class="fa faIcon fa-newspaper-o" aria-hidden="true" style="color: #EEE"></i>
                 Shipment Deleted</a>
-                <a href="Profile.php " class="d-block  text-light p-3"><i class="fa faIcon fa-newspaper-o" aria-hidden="true" style="color: #EEE"></i>
-                MY Profile </a>
+              
                
                
             </div>

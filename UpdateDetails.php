@@ -1,6 +1,6 @@
 <?php 
      session_start();
-     if(isset( $_GET['IDShipment'])) {$ShipId= $_GET['IDShipment'];}else{ }
+     if(isset( $_GET['IDShipment'])) {$ShipId= $_GET['IDShipment'];}
     
  ?>
   <!DOCTYPE html>

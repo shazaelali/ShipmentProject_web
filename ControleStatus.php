@@ -58,6 +58,12 @@
                                       <i class="fa fa-truck bleu" aria-hidden="true"></i>
                                           <span class="title">Status </span>
                                       </div>
+                                      <?php if(isset($_GET['Message']))
+                                     echo '<div  class="formDesgin divalert_Sucess"> Status shipment added </div>';
+                                      ?>
+                                       <?php if(isset($_GET['MessageError']))
+                                     echo '<div  class="formDesgin divalert"> fileds empty! </div>';
+                                      ?>
                                       <div class="card-body">
 
                                       <div class="form-group">
@@ -131,6 +137,15 @@
                       <div class="row">
                           <div class="col-sm-12 col-lg-12">
                                   <div class="styleDiv">
+                                  <?php if(isset($_GET['Messageuplode']))
+                                     echo '<div  class="formDesgin divalert_Sucess"> Image Uploded </div>';
+                                      ?>
+                                      <?php if(isset($_GET['MessageuplodeError']))
+                                     echo '<div  class="formDesgin divalert"> Error Try Again </div>';
+                                      ?>
+                                      <?php if(isset($_GET['MessageuplodeError2']))
+                                     echo '<div  class="formDesgin divalert"> Just les jpg et png files </div>';
+                                      ?>
                                       <div>
                                       <i class="fa fa-cloud-upload  bleu" aria-hidden="true"></i>
                                           <span class="title">Uplode Image </span>
