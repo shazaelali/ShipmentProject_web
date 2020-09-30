@@ -27,7 +27,7 @@
            <?php include 'topMenu.php';?>
       
          <div id="content">
-            <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
+            <div class="container-fluid top" >
 
                 <div class="row">
 
@@ -51,7 +51,7 @@
                              <div class="col-sm-12 col-lg-12">
                                 <div class="styleDiv" >
                                       <div>
-                                      <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                                      <i class="fa fa-newspaper-o bleu" aria-hidden="true"></i>
                                           <span  class="title">Shipment </span>
                                       </div>
                                    <form name="shippmentForm" action="insertShipment.php" method="post">
@@ -184,23 +184,7 @@
 
                     </div>
 
-                    <div class="col-lg-4 col-12">
-
-
-                        <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-
-
-
-                        </div>
-
-                        <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-
-
-
-                        </div>
-
-
-                    </div>
+                 
 
                 </div>
             </div>

@@ -29,15 +29,15 @@ if(mysqli_num_rows($res)==1){//>0 plusieur email meme password /==1 email avec p
            // session_start();
               $_SESSION['chauffeur']=$row["IdUsers"];
               $_SESSION['namechauffeur']=$row["FirstName"]." ".$row["LastName"];
-              $_SESSION['location']=$row["Address"];
-              $_SESSION['Email']=$row["Email"];
-              $_SESSION['Gender']=$row["Gender"];
-              $_SESSION['Profile']=$row["imgUser"];
+              $_SESSION['locationchauffeur']=$row["Address"];
+              $_SESSION['Emailchauffeur']=$row["Email"];
+              $_SESSION['Genderchauffeur']=$row["Gender"];
+              $_SESSION['ProfileChauffeur']=$row["imgUser"];
   
               header('location:chauffeur.php');
             }else{
               
-         $_SESSION['id']=$row["IdUsers"];
+         $_SESSION['idUsers']=$row["IdUsers"];
          $_SESSION['name']=$row["FirstName"]." ".$row["LastName"];
          $_SESSION['location']=$row["Address"];
          $_SESSION['Email']=$row["Email"];
@@ -49,12 +49,12 @@ if(mysqli_num_rows($res)==1){//>0 plusieur email meme password /==1 email avec p
          }
     }else{
         //not existe
-         header('location:Login.html');
+         header('location:Login.php?Password=Notexiste');
             }
  }
   else{
 //not existe
- header('location:Login.html');
+ header('location:Login.php?account=Notexiste');
     }
 mysqli_free_result($res);  //trye7 system men millons recreds dans le memoire 
 mysqli_close($connect);

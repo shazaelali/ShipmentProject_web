@@ -4,8 +4,12 @@
       session_start();
       include 'connect.php';
        if(isset($_SESSION["name"])){
-            echo "bonjour". $_SESSION["name"];
-            $idUser=$_SESSION['id'];
+            //echo "bonjour". $_SESSION["name"];
+            $idUser=$_SESSION['idUsers'];
+            
+ 
+
+          
         }else{
 
             header("Location:Login.html");
@@ -47,7 +51,7 @@ $query="SELECT * FROM `users`,shippment,shippmenttype,detail,descriptionupdate,r
 
 
    
-<a class="dropdown-item paddingMenu" href="LogOut.php"style="padding: 0px;" > <i class="fa fa-sign-out" aria-hidden="true"></i>logOut</a>
+
    <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
 
      <div class="row">
@@ -56,7 +60,10 @@ $query="SELECT * FROM `users`,shippment,shippmenttype,detail,descriptionupdate,r
             <div class="row">
                 <div class="col-12">
                     <div style="margin: 20px;">
-
+                    <span style="color: #26B7D4;font-size: 32px;">List Shipment of <?php if(isset($_SESSION["name"])) echo $_SESSION["name"];?></span>
+                    <a class="" href="#" id="button"style="padding: 0px; color: #212529; font-size: 32px;    float: right;" > LogOut </a>
+                    
+               
                     </div>
                 </div>
 
@@ -294,15 +301,40 @@ $query="SELECT * FROM `users`,shippment,shippmenttype,detail,descriptionupdate,r
             
   <?php include 'scriptFiles.php';?>
     <script src="js/jquery-3.5.1.min.js"></script> 
-  <script src="js/client.js"></script>
+ 
 
 </body>
 </html>
 
 
+<!-- Hidtory -->
 
-
-
+<?php include 'connect.php';
+$shippmentID=$_GET['IdShipment'] ;
+$idUser=$_SESSION['idUsers'];
+$date= date("Y/m/d");  
+$time= date("h:i:sa");
+if(!isset($_SESSION['idUsers'])){
+  echo "sfkn";
+} else{
+	   $shippmentID= $_GET['IdShipment'] ;
+	   
+	   $query="SELECT *FROM `history` WHERE shippmentID ='$shippmentID' And IdUsers='$idUser'";
+	   $resultQuery=mysqli_query($connect,$query);
+	   $count=mysqli_num_rows($resultQuery);
+		
+		   if($count==0){
+			   echo $count;
+			  
+				   $q="INSERT INTO `history`(`IdHistory`, `Date`, `time`, `IdUsers`, `shippmentID`) VALUES (NUll,'$date','$time','$idUser','$shippmentID')";
+				   echo $q;
+					   mysqli_query($connect,$q);
+					}
+			   else{	
+				}
+			   }
+				   mysqli_close($connect);  
+?>
 
 
 

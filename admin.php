@@ -24,6 +24,12 @@
         //shipment count
          $QueryShipment="SELECT count('shippment')FROM `shippment`";
          $Query_resultShipment = mysqli_query($connect, $QueryShipment); 
+         //shipment deleted count
+         $QueryShipmentDeleted="SELECT count('deleteshipment')FROM `deleteshipment`";
+         $Query_resultShipmentDeleted = mysqli_query($connect, $QueryShipmentDeleted); 
+         //chauffeur count
+         $Querychauffeur="SELECT Account,count('Account')FROM `users` WHERE Account='chauffeur' GROUP BY Account";
+         $Query_resultchauffeur = mysqli_query($connect, $Querychauffeur); 
 ?>
   <!DOCTYPE html>
      <html lang="en">
@@ -31,7 +37,7 @@
              <?php include 'files.php';?>  
    
              <link rel="stylesheet"  href="css/desginPages.css">
-             
+             <link rel="stylesheet" href="css/popup.css">
              <link rel="stylesheet"  href="css/leftMenu.css">
              <link rel="stylesheet" href="css/admin.css">
 
@@ -47,7 +53,13 @@
               <?php include 'topMenu.php';?>
             <div id="content">
                 <div class="container-fluid top" >
-
+                   
+                   <div class="row">
+                      <div class="col-g-12 col-12">
+                          <div style="margin:20px">
+                          </div>
+                      </div>
+                   </div>
                     
                     <div class="row">
                         <div class="col-lg-12 col-12">
@@ -162,7 +174,57 @@
 
 
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3  div " style="margin:0">
+                                            <div class=" card border-light " style="margin-bottom:0;background-color: white">
+                                                <div class="card-body">
+                                                    <div class="row no-gutters align-items-center">
+                                                        <div class="col mr-2">
+                                                            <div class="text-xs mb-1" style="color:#26B7D4">Total shipment deleted </div>
+                                                            <div class="h3 mb-0 font-weight-bold text-gray-800" style="color:#707070">
 
+                                                            <?php  
+                                                                  while($row = mysqli_fetch_array($Query_resultShipmentDeleted))  
+                                                                   {  
+                                                                    echo $row["count('deleteshipment')"];  
+                                                                      }  
+                                                                    ?>  
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                        <i class="fa fa-trash-o" aria-hidden="true" style="color:#26B7D4 ; font-size:50"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3  div " style="margin:0">
+                                            <div class="card border-light" style="margin-bottom:0;background-color: white">
+                                                <div class="card-body">
+                                                    <div class="row no-gutters align-items-center">
+                                                        <div class="col mr-2">
+                                                            <div class="text-xs mb-1" style="color:#26B7D4">Total Chauffeur</div>
+                                                            <div class="h3 mb-0 font-weight-bold text-gray-800" style="color:#707070">
+                                                            <?php  
+                                                                  while($row = mysqli_fetch_array($Query_resultchauffeur))  
+                                                                   {  
+                                                                    echo $row["count('Account')"];  
+                                                                      }  
+                                                                    ?>  
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <i class="fa fa-truck" aria-hidden="true" style="color:#26B7D4 ; font-size:50"></i>
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
 
 
                                     

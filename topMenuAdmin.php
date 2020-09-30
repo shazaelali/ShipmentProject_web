@@ -1,9 +1,10 @@
+<link rel="stylesheet"  href="css/popup.css">
 <nav class="navbar navbar-expand-lg navbar-light ">
                 <div class="container-fluid">
                     
                     <h3>
                         Welcome
-                        <?php if(isset($_SESSION["name"])){echo  $_SESSION["name"];}else {header("Location:Login.html");}?>
+                        <?php if(isset($_SESSION["chauffeur"])){echo  $_SESSION["namechauffeur"];}?>
                     </h3>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -19,18 +20,18 @@
                                     <img src="images/icon-delivery.png" alt="" class="img-fluid rounded-circle img mr-2">
                                     <?php
 
-                                    if(isset($_SESSION["name"])){
-                                    echo  $_SESSION["name"];
+                                    if(isset($_SESSION["chauffeur"])){
+                                    echo  $_SESSION["namechauffeur"];
                                     }
 
-                                    else{ header("Location:Login.html");} 
+                                    else{} 
                                     ?>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item paddingMenu" href="MyProfile.php" style="padding: 0px;"><i class="fa fa-user" aria-hidden="true"></i>My Profile</a>
 
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item paddingMenu" href="LogOut.php" style="padding: 0px;"> <i class="fa fa-sign-out" aria-hidden="true"></i>logOut</a>
+                                    <a class="dropdown-item paddingMenu" href="" id="button" style="padding: 0px;"> <i class="fa fa-sign-out" aria-hidden="true"></i>logOut</a>
                                 </div>
                             </li>
 
@@ -52,4 +53,16 @@
 					   </div>                  
                 </div>
                 </div>
-			   </div> 
+               </div> 
+               <script>
+                   document.getElementById("button").addEventListener("click",function(){
+          document.querySelector(".bg_model").style.display="flex" ;
+		  getSideBar.style.width="0px";
+           getSideBarUl.style.visibility="hidden";
+        });
+      document.querySelector(".close").addEventListener("click",function(){
+          document.querySelector(".bg_model").style.display="none" ;
+		  getSideBarUl.style.visibility="visible";
+          getSideBar.style.width="270px";
+        });
+               </script>

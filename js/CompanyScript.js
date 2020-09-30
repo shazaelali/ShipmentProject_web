@@ -17,7 +17,7 @@
            $("table").append('<tr>');
            $("table").append('<td scope="row">'+ myJISON[i].IdContract +'</td>');
            $("table").append('<td>'+ myJISON[i].NameEntreprise +'</td>');
-           $("table").append('<td>'+ myJISON[i].TypeShipmentName +'</td>');
+           $("table").append('<td>'+ myJISON[i].TypeName +'</td>');
            $("table").append('<td>'+ myJISON[i].dateContarct +'</td>');
            $("table").append('<td>'+ myJISON[i].dateExpire +'</td>');
            $("table").append('<td>'+ myJISON[i].descriptionContract +'</td>');

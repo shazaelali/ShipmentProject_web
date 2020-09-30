@@ -27,7 +27,21 @@
 
           <div id="content">
               <div class="container-fluid top" >
+                 
+                   <div class="row">
 
+                  <div class="col-12">
+                      <div class="row">
+                 
+                         <div class="col-12">
+
+                             <div style="margin: 20px;"> </div>
+
+       
+                         </div>
+                     </div>
+                  </div>
+             </div>
                   
                   <div class="row">
                       <div class="col-lg-6 col-12">
@@ -37,7 +51,7 @@
                               <div class="col-sm-12 col-lg-12">
                                   <div class="styleDiv">
                                       <div>
-                                          <i class="fa fa-file">   </i>
+                                        <i class="fa fa-map-marker bleu" aria-hidden="true"></i>
                                           <span class="title">Pays</span>
                                       </div>
                                       <div class="card-body">
@@ -72,7 +86,7 @@
                              <form name="Ville" action="Villes.php" method="post">
                                   <div class="styleDiv">
                                       <div>
-                                          <i class="fa fa-file">   </i>
+                                          <i class="fa fa-map-marker bleu" aria-hidden="true"></i>
                                           <span  class="title">Ville </span>
                                       </div>
                                       <div class="card-body">
@@ -126,7 +140,7 @@
                              <form name="Ville" action="region.php" method="post">
                                   <div class="styleDiv">
                                       <div>
-                                          <i class="fa fa-file">   </i>
+                                          <i class="fa fa-map-marker bleu" aria-hidden="true"></i>
                                           <span  class="title">Region </span>
                                       </div>
                                       <div class="card-body">
@@ -188,7 +202,7 @@
                               <div class="col-sm-12 col-lg-12">
                                   <div class="styleDiv" style="">
                                       <div>
-                                          <i class="fa fa-file">   </i>
+                                         <i class="fa fa-newspaper-o bleu" aria-hidden="true"></i>
                                           <span class="title">Type Shippement</span>
                                       </div>
                                       <div class="card-body">
@@ -223,9 +237,9 @@
                           </div>
                           <div class="row">
                           <div class="col-sm-12 col-lg-12">
-                                  <div style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+                                  <div class="styleDiv">
                                       <div>
-                                          <i class="fa fa-file">   </i>
+                                          <i<i class="fa fa-building bleu" aria-hidden="true"></i>
                                           <span style="color:#26B7D4; font-size: x-large;">Company </span>
                                       </div>
                                       <div class="card-body">
@@ -258,9 +272,9 @@
                           <div class="row">
                           <div class="col-sm-12 col-lg-12">
 
-                           <div style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+                           <div class="styleDiv">
                               <div>
-                                  <i class="fa fa-file">   </i>
+                                  <i class="fa fa-file bleu">   </i>
                                   <span style="color:#26B7D4; font-size: x-large;"> Description update Details</span>
                               </div>
                               <div class="card-body">

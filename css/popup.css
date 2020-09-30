@@ -1,0 +1,46 @@
+/*Pop Up*/
+.bg_model{
+    width: 100%;
+    height: 100%;/*100%*/
+    background-color: rgb(0,0, 0,0.7);
+    display: flex;
+    position: absolute;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+   
+}
+.model_content{
+    width: 300px;
+    height: 203px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 11px;
+    position: relative;
+   
+}
+.close{
+   display: block;
+   /* text-align: right; */
+   /* margin: 9px; */
+   position: absolute;
+   margin: 6px;
+   top: 0;
+   right: 14px;
+   transform: rotate(45deg);
+   font-size: 30px;
+   /* padding-bottom: 5px;*/
+   cursor: pointer;
+  
+
+}
+.LogOutDesgin{
+    font-size: 18px;
+    margin: 49px;
+    padding: 10px;
+}
+
+.LogOut{
+    color:orangered
+}

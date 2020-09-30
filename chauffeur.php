@@ -34,7 +34,7 @@
             
             <div id="content">
                 <div class="container-fluid top" >
-
+               
                     
                     <div class="row">
                         <div class="col-lg-12 col-12">
@@ -54,6 +54,24 @@
                               </div>
 
                           </div>
+                          <div class="row">
+                       <div class="col-6">
+                           <div style="margin:10px;">
+                              <span style="color: #26B7D4;font-size: 32px;"> shipment details</span>
+                           </div>
+                       </div>
+                       <div class="col-6">
+                           <div style="margin:10px;float: right">
+                              
+                             
+                              <a class="" href="LogOut.php" id="button"style="padding: 0px; color: #212529; font-size: 32px;" > LogOut </a>
+                              <i class="faIcon fa fa-sign-out " style="font-size: 32px;" aria-hidden="true"></i>
+
+                             
+                           </div>
+                       </div>
+
+                   </div>
                             <div class="row">
                                  <!--left side-->
                                 <div class="col-lg-12 col-12">
@@ -84,9 +102,9 @@
                                                         <td><?php echo $row['FirstName'];?> <?php echo $row['LastName'];?></td>
                                                        <td><?php  echo $row['To'];?></td>
                                                        <td><?php  echo $row['DateTOShip'];?></td>
-                                                       <td><a href="UpdateDetails.php?IDShipment=<?php echo $row['shippmentID'];?>">UpdateDetails</a></td>
-                                                       <td><a href="UpdateDetails.php?IDShipment=<?php echo $row['shippmentID'];?>">Update Stauts</a></td>
-                                                       <td><a href="DeletShipment.php?IDShipment=<?php echo $row['shippmentID'];?>">DeleteShipment</a></td>
+                                                       <td><a href="UpdateDetails.php?IDShipment=<?php echo $row['shippmentID'];?>" style="color:#26B7D4 ; font-size:20px">UpdateDetails</a></td>
+                                                       <td><a href="UpdateDetails.php?IDShipment=<?php echo $row['shippmentID'];?>" style="color:#26B7D4 ; font-size:20px">Update Stauts</a></td>
+                                                       <td><a href="DeletShipment.php?IDShipment=<?php echo $row['shippmentID'];?>"> <i class="fa fa-trash-o" aria-hidden="true" style="color:#26B7D4 ; font-size:50"></i></a></td>
                                              </tr>
                                            <?php }
                                              }

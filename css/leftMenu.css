@@ -2,7 +2,9 @@
 #sidbar-container{
     min-height: 100vh;
     background-color:	#585858;
+    
 }
+
 a:hover{ text-decoration: none; }
 
 #sidbar-container .logo{
@@ -41,4 +43,8 @@ i{
 }
 .heightDiv{
     height: 220px;
+}
+.fontSize{
+    font-size: 19px;
+  
 }

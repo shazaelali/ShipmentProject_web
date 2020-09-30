@@ -12,7 +12,7 @@
      else{
 		mysqli_query($connect,"INSERT INTO `status`(`StatusID`, `statusName`, `shippmentID`, `Id`) VALUES (NULL,'$statusName','$IDShip','$Image')");
       
-      header('location:Controle.php');
+      header('location:ControleStatus.php');
      }
      mysqli_close($connect);
      

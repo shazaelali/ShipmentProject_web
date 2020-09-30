@@ -44,6 +44,24 @@
                 </div>
 
              </div>
+             <div class="row">
+                       <div class="col-6">
+                           <div style="margin:10px;">
+                              <span style="color: #26B7D4;font-size: 32px;"> shipment Updates</span>
+                           </div>
+                       </div>
+                       <div class="col-6">
+                           <div style="margin:10px;float: right">
+                              
+                             
+                              <a class="" href="chauffeur.php" id="button"style="padding: 0px; color: #212529; font-size: 32px;" > back </a>
+                              <i class="faIcon fa fa-sign-out " style="font-size: 32px;" aria-hidden="true"></i>
+
+                             
+                           </div>
+                       </div>
+
+                   </div>
                   
                   <div class="row">
 

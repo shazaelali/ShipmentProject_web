@@ -9,6 +9,7 @@
      <link rel="stylesheet"  href="css/leftMenu.css">
      
      <link rel="stylesheet"  href="css/desginPages.css">
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/Company.css">
  
        <title>Company</title>
@@ -24,7 +25,7 @@
           <?php include 'topMenu.php';?>
        
            <div id="content">
-              <div class="container-fluid" >
+              <div class="container-fluid top" >
 
                <div class="row">
 

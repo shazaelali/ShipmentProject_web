@@ -56,7 +56,10 @@
                        <div class="col-6">
                            <div style="margin:10px;">
                               <span style="color: #26B7D4;font-size: 32px;">My Profile</span>
+                              
+                            
                            </div>
+                          
                        </div>
                        <div class="col-6">
                            <div style="margin:10px;float: right">
@@ -88,8 +91,8 @@
                                       <div class="col-6">
                                          <img src="images/<?php 
           
-                                                if(isset($_SESSION['Profile'])){
-                                                 echo  $_SESSION['Profile'];
+                                                if(isset($_SESSION['ProfileChauffeur'])){
+                                                 echo  $_SESSION['ProfileChauffeur'];
                                           }?>" 
                                           alt="" class="img-fluid rounded-circle  mr-2"
                                            width="150px" height="150px"/>
@@ -99,7 +102,7 @@
                                         <div style="font-size: 21px;">Full Name</div>
                                           <form action="" method="post">
                                                 <input type="text"  style="font-size: 21px;" id="" name=""
-                                                 value="<?php if(isset($_SESSION["name"])){echo  $_SESSION["name"];}else header('location:Login.php');?> ">
+                                                 value="<?php if(isset($_SESSION["namechauffeur"])){echo  $_SESSION["namechauffeur"];}else header('location:Login.php');?> ">
                                           </form>
                                         
                                           
@@ -128,22 +131,22 @@
                                         <td style="width:1px">
                                           <img src="images/<?php 
           
-                                                 if(isset($_SESSION['Profile'])){
-                                                     echo  $_SESSION['Profile'];
+                                                 if(isset($_SESSION['ProfileChauffeur'])){
+                                                     echo  $_SESSION['ProfileChauffeur'];
                                                      }else header('location:Login.php');?>" 
                                                      alt="" width="40px" height="40px"
                                                      class="img-fluid rounded-circle  mr-2"/>
                                         </td>
                                         <td>
-                                            <label class="m-0" for="user_nick_name" style="margin:0;color: #707070;font-size:14px;font-family: DIN_Next_CYR_Regular">
+                                            <label class="m-0" for="user_nick_name" style="margin:0;color: #707070;font-size:21px;font-family: DIN_Next_CYR_Regular ">
                                                 Nickname
                                             </label>
                                         </td>
                                         <td>
                                             <div class="" style="display: inline-block;float: right;font-size: 21px;">
                                                 <span class="small" style=" color:#26b7d4;"> 
-                                                <?php if(isset($_SESSION["name"])){
-                                                    echo  $_SESSION["name"];}else header('location:Login.php');?>
+                                                <?php if(isset($_SESSION["namechauffeur"])){
+                                                    echo  $_SESSION["namechauffeur"];}else header('location:Login.php');?>
                                                 </span>
 
                                             </div>
@@ -163,8 +166,8 @@
                                                   
                                                     <span class="small" style=" color #26b7d4;">
                                                     <?php 
-                                                    if(isset($_SESSION['location'])){
-                                                    echo $_SESSION['location'];}else header('location:Login.php');?>
+                                                    if(isset($_SESSION['locationchauffeur'])){
+                                                    echo $_SESSION['locationchauffeur'];}else header('location:Login.php');?>
                                                     </span>
                                               
          
@@ -186,8 +189,8 @@
                                             
                                                                 <span>
                                                                 <?php 
-                                                                    if(isset($_SESSION['Gender'])){
-                                                                       echo  $_SESSION['Gender'];}else header('location:Login.php');?>
+                                                                    if(isset($_SESSION['Genderchauffeur'])){
+                                                                       echo  $_SESSION['Genderchauffeur'];}else header('location:Login.php');?>
                                                               
                                               
 
@@ -201,7 +204,7 @@
                                            <i class="fa fa-envelope" aria-hidden="true" style="color:#70707061!important;font-size: 29px"></i>
                                         </td>
                                         <td>
-                                            <label class="m-0" for="user_phone_number" style="margin:0;color: #707070;font-size:14px;font-family: DIN_Next_CYR_Regular">
+                                            <label class="m-0" for="user_phone_number" style="margin:0;color: #707070;font-size:21px;font-family: DIN_Next_CYR_Regular">
                                                Email
                                             </label>
                                         </td>
@@ -210,10 +213,10 @@
                                                   
                                                    
                                                     
-                                                     <span class="small" style=" color #26b7d4;">
+                                                     <span class="small" style=" color #26b7d4;font-size: 21px;" >
                                                     <?php 
-                                                    if(isset( $_SESSION['Email'])){
-                                                    echo  $_SESSION['Email'];}else header('location:Login.php');?>
+                                                    if(isset( $_SESSION['Emailchauffeur'])){
+                                                    echo  $_SESSION['Emailchauffeur'];}else header('location:Login.php');?>
                                                     </span>
 
                                             

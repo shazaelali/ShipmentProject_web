@@ -31,8 +31,21 @@
           <?php include 'topMenu.php';?>
 
           <div id="content">
-              <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
+              <div class="container-fluid top">
+                  <div class="row">
 
+                  <div class="col-12">
+                      <div class="row">
+                 
+                         <div class="col-12">
+
+                             <div style="margin: 20px;"> </div>
+
+       
+                         </div>
+                     </div>
+                  </div>
+             </div>
               <div class="row">
                       <div class="col-lg-6 col-12">
 
@@ -42,7 +55,7 @@
                              <form name="Status" action="statusAdmin.php" method="post">
                                   <div class="styleDiv">
                                       <div>
-                                          <i class="fa fa-file">   </i>
+                                      <i class="fa fa-truck bleu" aria-hidden="true"></i>
                                           <span class="title">Status </span>
                                       </div>
                                       <div class="card-body">
@@ -117,10 +130,10 @@
                       <div class="col-lg-6 col-12">
                       <div class="row">
                           <div class="col-sm-12 col-lg-12">
-                                  <div style="min-height:200px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
+                                  <div class="styleDiv">
                                       <div>
-                                          <i class="fa fa-file">   </i>
-                                          <span class="title">Ville </span>
+                                      <i class="fa fa-cloud-upload  bleu" aria-hidden="true"></i>
+                                          <span class="title">Uplode Image </span>
                                       </div>
                                       <div class="card-body">
                                       

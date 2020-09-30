@@ -10,7 +10,8 @@
       <?php include 'files.php';?>  
 
      <link rel="stylesheet"  href="css/leftMenu.css">
-       
+     <link rel="stylesheet" href="css/contract.css">
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
      <link rel="stylesheet"  href="css/desginPages.css">
   
      <title>Contract</title>
@@ -26,7 +27,7 @@
          <?php include 'topMenu.php';?>
        
          <div id="content">
-            <div class="container-fluid" style="height:100%;overflow:auto;background-color:#F5F5F5">
+            <div class="container-fluid top" >
 
               <div class="row">
 
@@ -47,9 +48,9 @@
 
                    <div class="row">
                        <div class="col-sm-12 col-lg-12">
-                           <div style="background-color:white ;border-radius: 5px;padding:15px;margin-bottom:20px;">
+                           <div class="styleDiv">
                                <div>
-                                   <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                                   <i class="fa fa-newspaper-o bleu" aria-hidden="true"></i>
                                    <span style="color:#26B7D4; font-size: x-large;">Contart</span>
                                </div>
                                <div class="card-body">
@@ -108,7 +109,7 @@
                                        </select>
 
                                       
-                                       <button type="submit" class="btn btn-primary">Submit</button>
+                                       <button type="submit" class="btn btn btn-outline-dark marginBottom">Submit</button>
                                    </form>
 
 
@@ -121,24 +122,6 @@
 
                </div>
 
-
-               <div class="col-lg-4 col-12">
-
-
-                   <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-                   </div>
-                    
-
-                   <div class="row " style="min-height:318px; background-color:white; border-radius: 5px; margin:0px 5px;margin-bottom:20px;">
-
-                 
-
-                   </div>
-
-
-
-
-               </div>
 
            </div>
            </div>

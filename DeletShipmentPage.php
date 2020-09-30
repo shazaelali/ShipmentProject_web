@@ -27,7 +27,6 @@
         <?php include 'leftside.php';?>  
   
         <div class="w-100">
-              <?php include 'topMenu.php';?>
             <div id="content">
                 <div class="container-fluid top" >
 
@@ -50,6 +49,26 @@
                               </div>
 
                           </div>
+                          <div class="col-12">
+                   <div class="row">
+                       <div class="col-6">
+                           <div style="margin:10px;">
+                              <span style="color: #26B7D4;font-size: 32px;">Deleted shipment</span>
+                           </div>
+                       </div>
+                       <div class="col-6">
+                           <div style="margin:10px;float: right">
+                              
+                             
+                              <a class="" href="LogOut.php" id="button"style="padding: 0px; color: #212529; font-size: 32px;" > LogOut </a>
+                              <i class="faIcon fa fa-sign-out " style="font-size: 32px;" aria-hidden="true"></i>
+
+                             
+                           </div>
+                       </div>
+
+                   </div>
+               </div>
                             <div class="row">
                                  <!--left side-->
                                 <div class="col-lg-12 col-12">
@@ -65,6 +84,11 @@
                                                        <th scope="col">Origine</th>
                                                        <th scope="col">Destination</th>
                                                        <th scope="col">DateEstime</th>
+                                                       <th scope="col"></th>
+                                                       <th scope="col"></th>
+                                                       <th scope="col"></th>
+                                                       <th scope="col"></th>
+                                                       <th scope="col"></th>
                                                    
                                                     </tr>
                                                 
